@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from 'react'
-import Navbar from './components/navbar'
-import Footer from './components/footer'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import { BiPlay } from "react-icons/bi"
-import Video from './components/video'
+import Video from './components/Video'
 import { AnimatePresence } from 'framer-motion'
-import Testimonials from './components/testimonials'
+import Testimonials from './components/Testimonials'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import Services from './components/services.jsx'
+import Services from './components/Services.jsx'
 
 export default function Home() {
 

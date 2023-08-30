@@ -5,7 +5,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from 'framer-motion'
 
 
-const navbar = () => {
+const Navbar = () => {
     let [navbarOpen, setNavbarOpen] = useState(false);
     let [navbarShow, setNavbarShow] = useState(true);
 
@@ -98,4 +98,4 @@ const navbar = () => {
     )
 }
 
-export default navbar
+export default Navbar

@@ -3,7 +3,7 @@ import React from 'react'
 import { IoCloseOutline } from "react-icons/io5";
 import { motion } from 'framer-motion'
 
-const video = ({ videoOpen, setVideoOpen }) => {
+const Video = ({ videoOpen, setVideoOpen }) => {
 
     const dropIn = {
         hidden: {
@@ -67,4 +67,4 @@ const video = ({ videoOpen, setVideoOpen }) => {
     )
 }
 
-export default video
+export default Video

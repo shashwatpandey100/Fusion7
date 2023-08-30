@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsArrowUpRight } from "react-icons/bs";
 
-const footer = () => {
+const Footer = () => {
     return (
         <section className='w-screen h-[600px] pt-[6vw] pb-[4vw] px-10'>
             <div className='h-full w-full flex'>
@@ -58,4 +58,4 @@ const footer = () => {
     )
 }
 
-export default footer
+export default Footer
