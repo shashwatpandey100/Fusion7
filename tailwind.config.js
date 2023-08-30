@@ -7,12 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      keyframes: {
+        'slant': {
+          '50%': { transform: 'translateX(10px) translateY(0)' },
+        },
+    },
+    animation: {
+      'slant': 'slant 1s ease-in-out infinite alternate',
     },
   },
   plugins: [],
+  }
 }
