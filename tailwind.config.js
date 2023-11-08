@@ -9,13 +9,20 @@ module.exports = {
     extend: {
       keyframes: {
         'slant': {
-          '50%': { transform: 'translateX(10px) translateY(0)' },
+          '0%': { transform: 'translateX(0px) translateY(0px)' },
+          '100%': { transform: 'translateX(45px) translateY(-45px)' },
         },
-    },
-    animation: {
-      'slant': 'slant 1s ease-in-out infinite alternate',
+        'pendulum': {
+          '0%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(-60deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
+      },
+      animation: {
+        'slant': 'slant 0.45s',
+        'pendulum': 'pendulum 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
-  }
 }
