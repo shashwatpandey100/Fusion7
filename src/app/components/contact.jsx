@@ -49,12 +49,12 @@ const Contact = () => {
     if (state.succeeded) {
         return (
             <section className='h-[100%] w-full flex flex-col justify-center p-4 md:p-12 relative z-50'>
-                <p className='text-[6em] font-[600] lightBlack'>Thank you!</p>
+                <p className='text-[6em] font-[600] text-[#2c2c2c]'>Thank you!</p>
                 <div className='my-4 flex flex-col gap-3 text-gray-500 pb-[100px] max-w-[800px]'>
-                    <p className='boldFont lightBlack'>Your request has been successfully sent. Please await a response from our manager 🙂 </p>
-                    <p className='boldFont lightBlack'>If our manager is playing hard to get and hasn't responded yet, fear not! They're like a ninja in a business suit, lurking in the shadows of productivity. Give them a mere 24 hours, and if they don't pop up like a surprise birthday cake, they'll surely unleash their managerial superpowers on you soon! 🦸‍♂️💼</p>
+                    <p className='boldFont text-[#2c2c2c]'>Your request has been successfully sent. Please await a response from our manager 🙂 </p>
+                    <p className='boldFont text-[#2c2c2c]'>If our manager is playing hard to get and hasn't responded yet, fear not! They're like a ninja in a business suit, lurking in the shadows of productivity. Give them a mere 24 hours, and if they don't pop up like a surprise birthday cake, they'll surely unleash their managerial superpowers on you soon! 🦸‍♂️💼</p>
                 </div>
-                <div className='max-h-max absolute bottom-10 right-10 lightBlack'>
+                <div className='max-h-max absolute bottom-10 right-10 text-[#2c2c2c]'>
                     <p className='text-[12px] hover:underline my-[2px] leading-tight'>
                         <a href="https://www.instagram.com/thisiskromad/" target='_blank'>PINTEREST</a>
                     </p>
@@ -76,7 +76,7 @@ const Contact = () => {
             <>
                 <section className='h-[100%] w-full p-2 md:px-10 z-50 flex flex-col justify-evenly relative'>
                     <div className='w-full flex h-[10%] md:h-[20%]'>
-                        <h1 className='py-2 max-h-max underline w-full lightBlack font-[700] md:text-[76px] text-[36px] boldFont'>Hello, AceDevs!</h1>
+                        <h1 className='py-2 max-h-max underline w-full text-[#2c2c2c] font-[700] md:text-[76px] text-[36px] boldFont'>Hello!</h1>
                     </div>
 
                     <form onSubmit={handleSubmit} className='flex flex-col relative h-[90%] md:h-[80%] gap-4 md:gap-3'>
@@ -98,7 +98,7 @@ const Contact = () => {
                                             }`}
                                         onClick={() => handleInterestSelection(option)}
                                     >
-                                        <span className='text-[13px] md:text-[15px] font-[300] lightBlack'>{option}</span>
+                                        <span className='text-[13px] md:text-[15px] font-[300] text-[#2c2c2c]'>{option}</span>
                                     </div>
                                 ))}
                             </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                                             }`}
                                         onClick={() => handleBudgetSelection(option)}
                                     >
-                                        <span className='text-[13px] md:text-[15px] font-[300] lightBlack'>{option}</span>
+                                        <span className='text-[13px] md:text-[15px] font-[300] text-[#2c2c2c]'>{option}</span>
                                     </div>
                                 ))}
                             </div>
@@ -136,11 +136,11 @@ const Contact = () => {
                         </div>
 
                         <div className='w-full h-[10%] flex items-end justify-between absolute bottom-0'>
-                            <p className="text-[13px] md:text-[16px] text-[#cccaca]">Our Email: <a href="mailto:info@awsmd.com"><u>info@awsmd.com</u></a></p>
+                            <p className="text-[13px] md:text-[16px] text-[#cccaca]">Our Email: <a href="mailto:info@awsmd.com"><u>info@fusion7.com</u></a></p>
                             <div className='flex flex-col'>
                                 <button type='submit' disabled={state.submitting} className='flex group'>
-                                    <p className='underline uppercase text-[36px] leading-[36px] font-[700] lightBlack'>Submit</p>
-                                    <div className={`pt-1 pl-2 relative group w-[46px] h-[46px] overflow-hidden lightBlack`}>
+                                    <p className='underline uppercase text-[36px] leading-[36px] font-[700] text-[#2c2c2c]'>Submit</p>
+                                    <div className={`pt-1 pl-2 relative group w-[46px] h-[46px] overflow-hidden text-[#2c2c2c]`}>
                                         <div className='absolute left-[-5px] top-[5px] -mt-1 ml-1 group-hover:animate-slant'>
                                             <span className='text-[36px] leading-[36px] font-[700]'><BsArrowUpRight /></span>
                                         </div>

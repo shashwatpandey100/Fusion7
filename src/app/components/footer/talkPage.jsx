@@ -92,13 +92,13 @@ const TalkPage = () => {
             </div>
           </div>
           <div className="h-[55%] w-[100%] flex items-center justify-center">
-            <span className="textT text-[15em] italic">The/&nbsp;</span>
-            <span className="textT text-[15em]">THIRTY7</span>
+            <span className="textT text-[15em] tracking-tighter italic">The/&nbsp;</span>
+            <span className="textT text-[15em] tracking-tighter">FUSION7</span>
           </div>
         </div>
         <div className="border-t border-[rgba(0,0,0,0.25)] h-[80px] flex items-center justify-between px-[30px] text-[14px]">
-          <p className="text-[#4d4d4d]">2023 © The/ Thirty7</p>
-          <p className="text-[#000000] cursor-pointer" onClick={scrollToTop}>Back to top</p>
+          <p className="text-[#4d4d4d]">2023 © The/ Fusion7</p>
+          <p className="text-[#000000] cursor-pointer hover:underline" onClick={scrollToTop}>Back to top</p>
         </div>
       </section>
     </section>
