@@ -7,12 +7,32 @@ const Projects = () => {
       <Text />
       <section className="w-[100vw] h-[2884px] md:h-[1294px] flex flex-col gap-[12px] justify-evenly lightBg py-[50px]">
         <div className="w-full md:h-[630px] h-[1260px] flex flex-col md:flex-row gap-[12px] px-[12px] justify-center md:items-center">
-          <Card src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6465092857ac82c18e520810_Main%20Video-transcode.mp4" whatWeDid={["website", "app", "UI/UX"]} title='Taigon' />
-          <Card src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6468ee6491fa23c272150181_tagion_case-transcode.mp4" whatWeDid={["UI/UX"]} title='Taigon' />
+          <Card
+            src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6465092857ac82c18e520810_Main%20Video-transcode.mp4"
+            whatWeDid={["website", "app", "UI/UX"]}
+            title="Olam Capital"
+            desc="Explanation within visual content."
+          />
+          <Card
+            src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6468ee6491fa23c272150181_tagion_case-transcode.mp4"
+            whatWeDid={["UI/UX"]}
+            title="Taigon"
+            desc="Inspiration through brand and community."
+          />
         </div>
         <div className="w-full md:h-[630px] h-[1260px] flex flex-col md:flex-row gap-[12px] px-[12px] justify-center md:items-center">
-          <Card src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/646ddfa7f5f28af14e297c59_lilith_main-transcode.mp4" whatWeDid={["app", "UI/UX"]} title='Taigon' />
-          <Card src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/65294c09bc3127bcc5786cbd_Irys%2030%20sec%20loop-transcode.mp4" whatWeDid={["app", "UI/UX"]} title='Taigon' />
+          <Card
+            src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/646ddfa7f5f28af14e297c59_lilith_main-transcode.mp4"
+            whatWeDid={["app", "UI/UX"]}
+            title="Lilith Games"
+            desc="Performance created by immersive visuals and person-centric content."
+          />
+          <Card
+            src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/65294c09bc3127bcc5786cbd_Irys%2030%20sec%20loop-transcode.mp4"
+            whatWeDid={["app", "UI/UX"]}
+            title="Irys"
+            desc="Redefining brands of the future."
+          />
         </div>
       </section>
     </>
@@ -21,11 +41,10 @@ const Projects = () => {
 
 export default Projects;
 
-const Card = ({ src, whatWeDid, title }) => {
-
+const Card = ({ src, whatWeDid, title, desc }) => {
   return (
     <div className="w-[100%] md:w-[50%] h-[630px] relative overflow-hidden group z-[1]">
-      <div className="w-full absolute top-0 h-[30px] p-[10px] text-white text-[14px] flex gap-[10px]">
+      <div className="z-[2] w-full absolute top-0 h-[30px] p-[10px] text-white text-[14px] flex gap-[10px]">
         {whatWeDid?.map((item, index) => (
           <span
             key={index}
@@ -35,8 +54,11 @@ const Card = ({ src, whatWeDid, title }) => {
           </span>
         ))}
       </div>
+      <div className="z-[2] w-full absolute top-[45px] h-[30px] p-[10px] text-white text-[14px] flex items-center">
+        {desc}
+      </div>
 
-      <div className="w-full h-full bg-[#e3e8ea] rounded-[25px]">
+      <div className="w-full h-full bg-[#e3e8ea] rounded-[25px] relativez-[0]">
         <video
           src={src}
           autoPlay
@@ -45,11 +67,12 @@ const Card = ({ src, whatWeDid, title }) => {
           controls={false}
           className="h-full w-full object-cover rounded-[25px]"
         ></video>
+        <div className="absolute top-0 left-0 h-full w-full z-[1] bg-black opacity-[0.1]"></div>
       </div>
-      <div className="group-hover:w-[400px] transition-all duration-500 w-[80px] h-[60px] absolute bottom-[0] left-[0] lightBg rounded-tr-[25px] flex items-center">
-      <span className="text-white px-[15px]">{
-          title
-        }</span>
+      <div className="z-[2] group-hover:w-[400px] transition-all duration-500 w-[80px] h-[60px] absolute bottom-[0] left-[0] lightBg rounded-tr-[25px] flex items-center">
+        <span className="text-white px-[15px] whitespace-nowrap overflow-hidden">
+          {title}
+        </span>
         <div className="w-[25px] h-[25px] absolute bottom-[0] right-[-25px] bg-transparent rotate-270 scale-y-[-1]">
           <svg viewBox="0 0 10 10" id="svg504569976">
             <path

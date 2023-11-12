@@ -22,7 +22,7 @@ const TalkPage = () => {
   };
 
   return (
-    <section className="h-[80vh] w-[100vw] lightBg flex flex-col">
+    <section className="h-[80vh] w-[100vw] bg-[#fdefcc] flex flex-col">
       <section className="h-[10%] w-full"></section>
       <section className="h-[90%] w-full bg-[#e3051a] flex flex-col relative">
           <form onSubmit={handleSubmit} className='border-y border-[rgba(0,0,0,0.25)] h-[80px] mt-[50px] mb-[20px] px-[30px] flex flex-col md:flex-row items-center justify-between'>
