@@ -4,8 +4,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Projects = () => {
   return (
     <>
+      <section className="w-[100vw] max-h-max flex flex-col gap-[12px] justify-evenly lightBg pb-[100px]">
       <Text />
-      <section className="w-[100vw] h-[2884px] md:h-[1294px] flex flex-col gap-[12px] justify-evenly lightBg py-[50px]">
         <div className="w-full md:h-[630px] h-[1260px] flex flex-col md:flex-row gap-[12px] px-[12px] justify-center md:items-center">
           <Card
             src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6465092857ac82c18e520810_Main%20Video-transcode.mp4"
@@ -67,30 +67,12 @@ const Card = ({ src, whatWeDid, title, desc }) => {
           controls={false}
           className="h-full w-full object-cover rounded-[25px]"
         ></video>
-        <div className="absolute top-0 left-0 h-full w-full z-[1] bg-black opacity-[0.1]"></div>
+        <div className="absolute top-0 left-0 h-full w-full z-[1]" style={{background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%)'}}></div>
       </div>
-      <div className="z-[2] group-hover:w-[400px] transition-all duration-500 w-[80px] h-[60px] absolute bottom-[0] left-[0] lightBg rounded-tr-[25px] flex items-center">
+      <div className="z-[2] absolute bottom-[10px] left-[10px] flex items-center">
         <span className="text-white px-[15px] whitespace-nowrap overflow-hidden">
           {title}
         </span>
-        <div className="w-[25px] h-[25px] absolute bottom-[0] right-[-25px] bg-transparent rotate-270 scale-y-[-1]">
-          <svg viewBox="0 0 10 10" id="svg504569976">
-            <path
-              d="M 0 0 L 10 0 C 4.477 0 0 4.477 0 10 Z"
-              fill="#000000"
-              stroke="none"
-            ></path>
-          </svg>
-        </div>
-        <div className="w-[25px] h-[25px] absolute top-[-25px] left-[0] bg-transparent rotate-270 scale-y-[-1]">
-          <svg viewBox="0 0 10 10" id="svg504569976">
-            <path
-              d="M 0 0 L 10 0 C 4.477 0 0 4.477 0 10 Z"
-              fill="#000000"
-              stroke="none"
-            ></path>
-          </svg>
-        </div>
       </div>
     </div>
   );
@@ -98,8 +80,8 @@ const Card = ({ src, whatWeDid, title, desc }) => {
 
 const Text = () => {
   return (
-    <section className="w-[100vw] h-[80vh] flex flex-col items-center justify-center lightBg">
-      <p className="w-full textT text-[9em] text-[#e3051a] italic">
+    <section className="w-[100vw] h-[calc(60vh+200px)] flex flex-col items-center justify-center lightBg py-[100px]">
+      <p className="w-full textT text-[6em] lg:text-[9em] text-[#e3051a] italic text-center">
         Featured work
       </p>
       <img

@@ -1,6 +1,5 @@
 .menu {
     height: 100vh;
-    width: 35vw;
     background-color: white;
     position: fixed;
     left: 0;
@@ -9,49 +8,41 @@
     z-index: 50;
 }
 
-@media screen and (max-width: 768px) {
-    .menu {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .menu {
-        width: 50vw;
-    }
-}
-
 .menu .body {
     box-sizing: border-box;
     height: 100%;
-    padding: 100px 60px;
+    padding: 100px 60px 150px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 540px) {
     .menu .body {
-        padding-left: 20px !important;
-        padding-top: 50px !important;
-        padding-bottom: 50px !important;
+        padding: 100px 60px 150px 60px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu .body {
+        padding: 100px 30px 150px 30px !important;
     }
 }
 
 .menu .body .nav {
     display: flex;
     flex-direction: column;
+    text-align: left;
+    justify-content: center;
     font-size: 66px;
     margin-top: 20px;
     line-height: 96px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .menu .body .nav {
-        font-size: 56px;
-        gap: 0;
-        margin-top: 20px;
+        font-size: 60px;
     }
 }
 

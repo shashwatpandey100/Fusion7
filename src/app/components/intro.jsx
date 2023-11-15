@@ -1,12 +1,14 @@
 import React from 'react'
+import Video from './video'
 
 const Intro = () => {
 
     return (
-        <section className='w-screen h-[100vh] lightBg'>
+        <section className='w-screen h-[100vh] lightBg relative'>
+            <Video />
             <div className='h-[100vh] border-5 border-green-400 w-[100vw] z-[-2]'>
-                <section className='w-screen h-screen flex flex-col leading-[3em] md:leading-[6em] items-center justify-center p-2 md:p-6 relative'>
-                    <p className='text-[3em] text-center boldFont md:leading-[180px] md:text-[12em] tracking-tighter lightBlack'>
+                <section className='w-screen h-screen flex flex-col leading-[3em] md:leading-[6em] items-center justify-center p-2 lg:p-6 relative'>
+                    <p className='text-[3em] text-center boldFont md:leading-[120px] lg:leading-[180px] md:text-[8em] lg:text-[12em] tracking-tighter lightBlack'>
                         YOUR DIGITAL FUTURE WELL BUILT
                     </p>
                     <div className='flex mt-5 justify-between flex items-center md:max-w-max'>
@@ -23,8 +25,8 @@ const Intro = () => {
                         </div>
                     </div>
 
-                    <div className='absolute bottom-10 left-10 cursor-pointer z-[6]'>
-                        <div className='max-h-max font-[300] flex gap-3 uppercase text-[12px] lightBlack'>
+                    <div className='absolute bottom-10 left-5 md:left-8 lg:left-10 cursor-pointer z-[6]'>
+                        <div className='max-h-max font-[300] flex gap-3 uppercase text-[10px] lg:text-[12px] lightBlack'>
                             <a href="https://www.instagram.com/thisiskromad/" target='_blank'><p className='hover:underline leading-tight w-full'>
                                 YOUTUBE
                             </p></a>
@@ -35,13 +37,13 @@ const Intro = () => {
                                 DRIBBLE
                             </p></a>
                             <a href="https://www.instagram.com/thisiskromad/" target='_blank'><p className='hover:underline leading-tight w-full'>
-                                PINTEREST
+                                LINKEDIN
                             </p></a>
                         </div>
                     </div>
 
-                    <div className='absolute bottom-10 right-10 cursor-pointer z-[6]'>
-                        <div className='max-h-[15px] font-[300] flex gap-3 uppercase text-[12px] lightBlack'>
+                    <div className='absolute bottom-10 right-5 md:right-8 lg:right-10 cursor-pointer z-[6]'>
+                        <div className='max-h-[15px] font-[300] flex gap-3 uppercase text-[10px] lg:text-[12px] lightBlack'>
                             <div className='hover:underline leading-tight w-full'>
                                 13 : 49  &nbsp;  12 September 2023
                             </div>

@@ -25,7 +25,7 @@ const TalkPage = () => {
     <section className="h-[80vh] w-[100vw] bg-[#fdefcc] flex flex-col">
       <section className="h-[10%] w-full"></section>
       <section className="h-[90%] w-full bg-[#e3051a] flex flex-col relative">
-          <form onSubmit={handleSubmit} className='border-y border-[rgba(0,0,0,0.25)] h-[80px] mt-[50px] mb-[20px] px-[30px] flex flex-col md:flex-row items-center justify-between'>
+          <form onSubmit={handleSubmit} className='border-y border-[rgba(0,0,0,0.25)] h-[200px] md:h-[80px] mt-[50px] mb-[20px] px-[30px] flex flex-col md:flex-row items-center justify-between'>
           {
             state.succeeded ? 
             <>
@@ -38,12 +38,12 @@ const TalkPage = () => {
             placeholder="Enter email address"
             name='email'
             onChange={handleInputChange}
-            className="h-full w-[400px] border-none bg-inherit text-black placeholder-black text-[18px]"
+            className="h-full w-full md:w-[400px] border-none bg-inherit text-black placeholder-black text-[13px] md:text-[18px]"
           />
           <button
             type="submit"
             disabled={state.submitting}
-            className="h-[50px] w-[200px] border border-black hover:bg-black hover:text-[#e3051a]"
+            className="h-[100px] md:h-[50px] w-full md:w-[200px] md:mb-[0px] mb-[20px] text-[13px] md:text-[18px] border border-black hover:bg-black hover:text-[#e3051a]"
           >
             {
               state.submitting ? 'Please wait' : 'Subscribe'
@@ -85,15 +85,15 @@ const TalkPage = () => {
                   target="_blank"
                 >
                   <p className="hover:underline leading-tight w-full">
-                    PINTEREST
+                    LINKEDIN
                   </p>
                 </a>
               </div>
             </div>
           </div>
-          <div className="h-[55%] w-[100%] flex items-center justify-center">
-            <span className="textT text-[15em] tracking-tighter italic">The/&nbsp;</span>
-            <span className="textT text-[15em] tracking-tighter">FUSION7</span>
+          <div className="h-[55%] w-[100%] flex items-center justify-center mb-[10px]">
+            <span className="textT text-[17vw] tracking-tighter italic">The/&nbsp;</span>
+            <span className="textT text-[17vw] tracking-tighter">FUSION7</span>
           </div>
         </div>
         <div className="border-t border-[rgba(0,0,0,0.25)] h-[80px] flex items-center justify-between px-[30px] text-[14px]">

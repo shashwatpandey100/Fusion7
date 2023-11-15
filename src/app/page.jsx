@@ -7,7 +7,6 @@ import SmoothScroll from "./components/smoothScroll.js";
 import Preloader from "./components/preloader/preloader.jsx";
 import { AnimatePresence } from "framer-motion";
 import TalkPage from "./components/footer/talkPage.jsx";
-import Video from "./components/video.jsx";
 import Services from "./components/services.jsx";
 
 export default function Home() {
@@ -27,11 +26,10 @@ export default function Home() {
       {!isLoading && (
         <SmoothScroll>
           <section>
-            <Intro id="home" />
-            <Video id="Video" />
-            <Services id="services" />
-            <Projects id="project" />
-            <Testimonials id="testimonials" />
+            <Intro id="Home" />
+            <Services id="Services" />
+            <Projects id="Project" />
+            <Testimonials id="Testimonials" />
             <TalkPage />
           </section>
         </SmoothScroll>

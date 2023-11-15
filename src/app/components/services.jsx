@@ -2,9 +2,9 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section className="max-h-max min-h-[100vh] w-[100vw] py-[100px] px-[30px] bg-[#fdefcc]">
+    <section className="max-h-max w-[100vw] px-[30px] bg-[#fdefcc]">
       <Text />
-      <section className="flex flex col lg:flex-row gap-[10px]">
+      <section className="flex flex-col items-center lg:justify-evenly lg:flex-row gap-[10px] pb-[100px]">
         <Tab />
         <Tab />
         <Tab />
@@ -17,7 +17,7 @@ const Services = () => {
 
 const Tab = () => {
     return (
-      <div className="lg:w-[25%] h-[350px] rounded-[12px] bg-[#e3e8ea]">
+      <div className="lg:w-[25%] w-full max-w-[500px] h-[400px] rounded-[12px] bg-[#e3e8ea]">
   
       </div>
     )
@@ -27,8 +27,8 @@ export default Services;
 
 const Text = () => {
     return (
-      <section className="w-full h-[60vh] flex flex-col items-center justify-center">
-        <p className="w-full textT text-[9em] text-[#e3051a] italic">
+      <section className="w-full h-[calc(60vh+200px)] flex flex-col items-center justify-center py-[100px]">
+        <p className="w-full textT text-[6em] md:text-[9em] text-[#e3051a] italic text-center">
           Our services
         </p>
         <img
