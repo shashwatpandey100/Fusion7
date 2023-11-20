@@ -15,6 +15,10 @@
   user-select: none;
 }
 
+.normalFont {
+  font-family: Aeonik, Helvetica, sans-serif;
+}
+
 .boldFont {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
@@ -46,4 +50,79 @@ input:-webkit-autofill:active{
     -webkit-text-fill-color: #ffffff;
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: none;
+}
+
+.slick-track {
+  display: flex;
+  gap: 3px !important;
+}
+
+.responsiveWidth {
+  width: 450px;
+}
+
+@media screen and (min-width: 1210px) and (max-width: 1410px) {
+  .responsiveWidth {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1168px) and (max-width: 1210px) {
+  .responsiveWidth {
+    width: 580px;
+  }
+}
+
+@media screen and (min-width: 1118px) and (max-width: 1168px) {
+  .responsiveWidth {
+    width: 550px;
+  }
+}
+
+@media screen and (min-width: 1068px) and (max-width: 1118px) {
+  .responsiveWidth {
+    width: 524px;
+  }
+}
+
+@media screen and (min-width: 1018px) and (max-width: 1068px) {
+  .responsiveWidth {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 968px) and (max-width: 1018px) {
+  .responsiveWidth {
+    width: 474px;
+  }
+}
+
+@media screen and (min-width: 918px) and (max-width: 968px) {
+  .responsiveWidth {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 868px) and (max-width: 918px) {
+  .responsiveWidth {
+    width: 424px;
+  }
+}
+
+@media screen and (min-width: 818px) and (max-width: 868px) {
+  .responsiveWidth {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 818px) {
+  .responsiveWidth {
+    width: 370px;
+  }
+}
+
+@media (max-width: 767px) {
+  .responsiveWidth {
+    width: calc(100% - 20px);
+  }
 }

@@ -135,7 +135,7 @@ const Contact = () => {
                         </div>
 
                         <div className='w-full h-[10%] flex items-end justify-between absolute bottom-0'>
-                            <p className="text-[13px] lg:text-[16px] text-[#cccaca]">Our Email: <a href="mailto:info@awsmd.com"><u>hello@fusion7.com</u></a></p>
+                            <p className="text-[13px] lg:text-[16px] text-[#cecece]">Our Email: <a href="mailto:info@awsmd.com"><u>hello@fusion7.agency</u></a></p>
                             <div className='flex flex-col'>
                                 <button type='submit' disabled={state.submitting} className='flex group'>
                                     <p className='underline uppercase text-[26px] lg:text-[36px] lg:leading-[36px] leading-[26px] font-[700] text-[#2c2c2c]'>Submit</p>

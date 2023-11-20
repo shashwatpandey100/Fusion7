@@ -86,13 +86,7 @@ const Navbar = () => {
       <AnimatePresence mode="wait">
         {menuOpen && (
           <>
-            <section
-              className="flex w-[100vw] z-[12] fixed top-0 left-0"
-              onClick={closeMenu}
-            >
-              <Blur />
-            </section>
-
+           <Blur closeMenu={closeMenu} />
             <motion.div
               variants={menuSlide}
               initial="initial"

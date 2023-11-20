@@ -27,16 +27,16 @@ const Intro = () => {
 
                     <div className='absolute bottom-10 left-5 md:left-8 lg:left-10 cursor-pointer z-[6]'>
                         <div className='max-h-max font-[300] flex gap-3 uppercase text-[10px] lg:text-[12px] lightBlack'>
-                            <a href="https://www.instagram.com/thisiskromad/" target='_blank'><p className='hover:underline leading-tight w-full'>
+                            <a href="https://www.youtube.com/@Fusion7Studios" target='_blank'><p className='hover:underline leading-tight w-full'>
                                 YOUTUBE
                             </p></a>
-                            <a href="https://www.instagram.com/thisiskromad/" target='_blank'><p className='hover:underline leading-tight w-full'>
+                            <a href="https://www.instagram.com/fusion7studio/" target='_blank'><p className='hover:underline leading-tight w-full'>
                                 INSTAGRAM
                             </p></a>
-                            <a href="https://www.instagram.com/thisiskromad/" target='_blank'><p className='hover:underline leading-tight w-full'>
+                            <a href="https://dribbble.com/Fusion7" target='_blank'><p className='hover:underline leading-tight w-full'>
                                 DRIBBLE
                             </p></a>
-                            <a href="https://www.instagram.com/thisiskromad/" target='_blank'><p className='hover:underline leading-tight w-full'>
+                            <a href="https://www.linkedin.com/in/fusion7-studio-b8095a29b/" target='_blank'><p className='hover:underline leading-tight w-full'>
                                 LINKEDIN
                             </p></a>
                         </div>

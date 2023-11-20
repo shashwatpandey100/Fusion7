@@ -22,7 +22,7 @@ const TalkPage = () => {
   };
 
   return (
-    <section className="h-[80vh] w-[100vw] bg-[#fdefcc] flex flex-col">
+    <section className="h-[80vh] w-[100vw] bg-white flex flex-col">
       <section className="h-[10%] w-full"></section>
       <section className="h-[90%] w-full bg-[#e3051a] flex flex-col relative">
           <form onSubmit={handleSubmit} className='border-y border-[rgba(0,0,0,0.25)] h-[200px] md:h-[80px] mt-[50px] mb-[20px] px-[30px] flex flex-col md:flex-row items-center justify-between'>
@@ -57,7 +57,7 @@ const TalkPage = () => {
             <div className="cursor-pointer z-[6]">
               <div className="max-h-max font-[300] flex gap-3 uppercase text-[12px]">
                 <a
-                  href="https://www.instagram.com/thisiskromad/"
+                  href="https://www.youtube.com/@Fusion7Studios"
                   target="_blank"
                 >
                   <p className="hover:underline leading-tight w-full">
@@ -65,7 +65,7 @@ const TalkPage = () => {
                   </p>
                 </a>
                 <a
-                  href="https://www.instagram.com/thisiskromad/"
+                  href="https://www.instagram.com/fusion7studio/"
                   target="_blank"
                 >
                   <p className="hover:underline leading-tight w-full">
@@ -73,7 +73,7 @@ const TalkPage = () => {
                   </p>
                 </a>
                 <a
-                  href="https://www.instagram.com/thisiskromad/"
+                  href="https://dribbble.com/Fusion7"
                   target="_blank"
                 >
                   <p className="hover:underline leading-tight w-full">
@@ -81,7 +81,7 @@ const TalkPage = () => {
                   </p>
                 </a>
                 <a
-                  href="https://www.instagram.com/thisiskromad/"
+                  href="https://www.linkedin.com/in/fusion7-studio-b8095a29b/"
                   target="_blank"
                 >
                   <p className="hover:underline leading-tight w-full">
