@@ -20,7 +20,7 @@ const Intro = () => {
       <Video />
       <div className="h-[100vh] border-5 border-green-400 w-[100vw] z-[-2]">
         <section className="w-screen h-screen flex flex-col leading-[3em] md:leading-[6em] items-center justify-center p-2 lg:p-6 relative">
-          <p className="text-[3em] text-center boldFont md:leading-[120px] lg:leading-[180px] md:text-[8em] lg:text-[12em] tracking-tighter lightBlack">
+          <p className="text-[3em] text-center boldFont md:leading-[120px] lg:leading-[180px] md:text-[8em] lg:text-[12em] tracking-tighter text-white">
             YOUR DIGITAL FUTURE WELL BUILT
           </p>
           <div className="flex mt-5 justify-between flex items-center md:max-w-max">
