@@ -1,16 +1,15 @@
 import Star from "./Star";
 
-const Card = ({stars, text, name, position}) => {
-  const stylesP = {
-    '@media (min-width: 48rem)': {
-      fontSize: '1.67vw',
-      lineHeight: '1.3em',
-      marginBottom: '3.1vw',
-      marginTop: '5vw',
-    },
-  };
+const Card = ({ stars, text, name, position }) => {
+
+  const starElements = [];
+
+  for (let i = 0; i < stars; i++) {
+    starElements.push(<Star key={i} />);
+  }
+
   return (
-    <div className="mx-[10px] responsiveWidth h-[85vh] bg-[#e3e8ea] rounded-[25px] overflow-hidden cursor-pointer">
+    <div className="mx-[10px] responsiveWidth h-[80vh] bg-[#e3e8ea] rounded-[25px] overflow-hidden cursor-pointer">
       <div className="w-[100%] relative min-h-[400px] h-[100%] md:pt-[2.86vw] md:pr-[2.38vw] md:pb-[2.38vw] md:pl-[2.38vw] pt-[35px] pr-[30px] pb-[35px] pl-[30px] flex flex-col">
         <div className="bg-[#e3e8ea] h-[100%] w-[100%] flex flex-col justify-between">
           <div className="flex">
@@ -34,19 +33,15 @@ const Card = ({stars, text, name, position}) => {
                 </svg>
               </span>
               <div className="flex mx-[12px] mb-[5px] gap-[1px]">
-                <Star />
-                <Star />
-                <Star />
-                <Star />
-                <Star />
+              {starElements}
               </div>
               <span className="text-[13px] leading-[1.3em] mb-[5px] normalFont">
-                5.0
+                {stars}.0
               </span>
             </div>
           </div>
           <div className="">
-            <p className="mb-[45px] mt-[45px] normalFont text-[20px]" style={stylesP}>
+            <p className="mb-[45px] mt-[45px] normalFont text-[20px] font-[400] customFontSize">
               {text}
             </p>
             <div>
@@ -63,6 +58,5 @@ const Card = ({stars, text, name, position}) => {
     </div>
   );
 };
-
 
 export default Card;

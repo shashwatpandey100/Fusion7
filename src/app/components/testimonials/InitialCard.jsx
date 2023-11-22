@@ -3,7 +3,7 @@ import ClutchIcon from "./ClutchIcon";
 
 const InitialCard = ({totalReviews}) => {
     return (
-      <div className="mx-[10px] responsiveWidth h-[85vh] bg-cover bg-no-repeat rounded-[25px] overflow-hidden flex flex-col items-center justify-center relative">
+      <div className="mx-[10px] responsiveWidth h-[80vh] bg-cover bg-no-repeat rounded-[25px] overflow-hidden flex flex-col items-center justify-center relative">
         <div className="h-[100%] w-[100%] p-[32px] overflow-hidden flex flex-col items-center justify-center cursor-pointer relative">
           <a href="https://clutch.co/profile/unikorns-0" target="_blank">
             <div className="h-[100%] absolute top-0 left-0 w-full z-[-1]">

@@ -25,19 +25,19 @@ const data = [
   {
     img: "https://unblast.com/wp-content/uploads/2023/01/Industrial-iPhone-14-Mockup-1536x1152.jpg",
     heading: "Mobile App Development",
-    desc: "Many years of expertise in mobile development allow us to design architecture and create bespoke native applications for Apple iOS and Google Android.",
+    desc: "Years of mobile development expertise empower us to design robust architectures and create custom React Native apps, ensuring compatibility on both iOS and Android.",
     tech: ["React Native", "MongoDb", "PostgreSql", "NodeJs"],
   },
   {
     img: "https://unblast.com/wp-content/uploads/2019/01/Website-Mockup-1600x1189.jpg",
     heading: "Web Development",
-    desc: "Our adaptive design components are built using perfectly structured and readable code. We make sure that the development solutions are well-optimized and work flawlessly across devices and browsers.",
+    desc: "Crafting adaptive design components with meticulous code, we prioritize optimizing development for seamless functionality across devices and browsers.",
     tech: ["ReactJs", "NextJs", "NodeJs", "MongoDb", "PostgreSql"],
   },
   {
     img: "https://unblast.com/wp-content/uploads/2023/06/Essential-Branding-Mockup-1536x1152.jpg",
     heading: "Design Solutions",
-    desc: "We're driven by user‑centered design that drives productivity and increases revenue. Our expertise and ingenuity are remarkable, yet we always strive to outdo and outperform our previous achievements.",
+    desc: "Fueled by user-centered design, we boost productivity and revenue with remarkable expertise. Always surpassing our previous achievements, our ingenuity sets us apart.",
     tech: [
       "Figma",
       "Adobe AfterEffects",
@@ -93,7 +93,7 @@ const Text = () => {
         alt=""
         className="my-[25px]"
       />
-      <p className="max-w-[380px] text-[18px] text-[#e3051a] italic textT">
+      <p className="max-w-[380px] text-[18px] text-[#e3051a] italic textT text-center">
       We are a dynamic digital design and development company, dedicated to delivering exceptional services that align seamlessly with our clients' unique needs. Our forte comes to the forefront as we deeply understand and address the specific requirements of our clients. 
       </p>
     </section>

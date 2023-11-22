@@ -64,7 +64,8 @@ const Testimonials = () => {
   return (
     <section className="max-h-max w-[100vw] bg-white">
       <Text />
-      <section className="pb-[50px] z-[0] bg-white w-screen pl-[10px]">
+      <section className="pb-[50px] z-[0] bg-white w-screen pl-[10px] overflow-hidden">
+
           <Slider ref={sliderRef} {...settings}>
             <InitialCard totalReviews={data.length} />
             {data.map((testimonial, index) => (

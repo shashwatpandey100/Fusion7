@@ -62,3 +62,12 @@ input:-webkit-autofill:active{
     width: calc(100% - 20px);
   }
 }
+
+@media (min-width: 48rem) {
+  .customFontSize {
+    font-size: 1.67vw;
+    line-height: 1.3em;
+    margin-bottom: 3.1vw;
+    margin-top: 5vw;
+  }
+}

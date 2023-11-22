@@ -89,7 +89,7 @@ const Text = () => {
         alt=""
         className="my-[25px]"
       />
-      <p className="max-w-[380px] text-[18px] text-[#e3051a] italic textT">
+      <p className="max-w-[380px] text-[18px] text-[#e3051a] italic textT text-center">
       Explore our standout projects in the Featured Works section, showcasing our expertise in digital design and development. Each project reflects our commitment to innovation across diverse industries.
       </p>
     </section>
