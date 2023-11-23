@@ -25,21 +25,21 @@ const Intro = () => {
           </p>
           <div className="flex mt-5 justify-between flex items-center md:max-w-max">
             <div className="md:w-[100%] max-w-max h-[62px] flex items-center gap-[7px]">
-              <div className="rounded-full w-[80px] h-[80px]">
+              <div className="rounded-full w-[60px] h-[60px]">
                 <img
                   className="rounded-full"
                   src="https://a.storyblok.com/f/206664/1000x1000/8da3490e4d/dima_headshot-min.jpg/m/120x120/smart/filters:quality(95):format(webp)"
                   alt=""
                 />
               </div>
-              <div className="rounded-full w-[80px] h-[80px]">
+              <div className="rounded-full w-[60px] h-[60px]">
                 <img
                   className="rounded-full"
                   src="https://a.storyblok.com/f/206664/1000x1000/18a0df5677/masha_headshot-min.jpg/m/120x120/smart/filters:quality(95)"
                   alt=""
                 />
               </div>
-              <div className="rounded-full w-[80px] h-[80px]">
+              <div className="rounded-full w-[60px] h-[60px]">
                 <img
                   className="rounded-full"
                   src="https://a.storyblok.com/f/206664/1000x1000/a7ca135007/vlad_headshot-min.jpg/m/120x120/smart/filters:quality(95)"

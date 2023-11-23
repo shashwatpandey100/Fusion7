@@ -63,7 +63,7 @@ const Card = ({ img, heading, desc, tech }) => {
       ></div>
 
       <div className="h-full w-full aboslute top-0 left-0 p-[25px] flex flex-col z-[2] relative">
-        <h1 className="h-[20%] text-[32px] normalFont">{heading}</h1>
+        <h1 className="h-[20%] text-[28px] normalFont">{heading}</h1>
         <div className="h-[60%] normalFont relative">
           <p className="absolute bottom-[20px] normalFont text-[14px]">{desc}</p>
         </div>

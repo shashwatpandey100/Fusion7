@@ -41,7 +41,7 @@ const Card = ({ stars, text, name, position }) => {
             </div>
           </div>
           <div className="">
-            <p className="mb-[45px] mt-[45px] normalFont text-[20px] font-[400] customFontSize">
+            <p className="mb-[45px] mt-[45px] normalFont font-[400] customFontSize">
               {text}
             </p>
             <div>

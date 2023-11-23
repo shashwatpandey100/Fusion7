@@ -79,7 +79,7 @@ const Testimonials = () => {
           ))}
           </Slider>
 
-        <div className="max-h-max my-[2vw] flex flex-col items-center justify-center gap-[0.9vw]">
+        <div className="max-h-max my-[2vw] flex flex-col items-center justify-center mt-[30px] gap-[1.8vw]">
           <div className="h-[2px] w-[310px] bg-[rgba(0,0,0,0.1)] relative">
             <div
               className={`absolute h-full bg-[rgba(0,0,0,1)] transition-all duration-500`}

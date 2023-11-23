@@ -16,7 +16,7 @@
 }
 
 .normalFont {
-  font-family: Aeonik, Helvetica, sans-serif;
+  font-family: sans-serif;
 }
 
 .boldFont {
@@ -65,9 +65,41 @@ input:-webkit-autofill:active{
 
 @media (min-width: 48rem) {
   .customFontSize {
-    font-size: 1.67vw;
+    font-size: 1.5em;
     line-height: 1.3em;
-    margin-bottom: 3.1vw;
-    margin-top: 5vw;
+    margin-bottom: 6vw;
+    margin-top: 3vw;
   }
+}
+
+.text-primary-200 {
+  --tw-text-opacity: 1;
+  color: rgb(242 242 242 / var(--tw-text-opacity));
+}
+.text-works-title {
+  font-size: clamp(1.25rem,2vw,1.5rem);
+  font-family: sans-serif;
+}
+.text-secondary-600 {
+  --tw-text-opacity: 1;
+  color: rgb(140 140 115 / var(--tw-text-opacity));
+}
+.text-body-2 {
+  font-size: clamp(0.8rem,1.3vw,1.3rem);
+  font-family: sans-serif;
+}
+.font-light {
+  font-weight: 300;
+}
+.text-primary-400 {
+  --tw-text-opacity: 1;
+  color: rgb(217 217 217 / var(--tw-text-opacity));
+}
+.text-body-4 {
+  font-size: clamp(.75rem,3vw,1rem);
+}
+
+.border-secondary-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(140 140 115 / var(--tw-border-opacity));
 }
