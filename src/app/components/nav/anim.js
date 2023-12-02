@@ -18,7 +18,11 @@ export const slide = {
 
 export const slideUp = {
     initial: { y: 0 },
-    exit: i => ({ y: '-100vh', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i } })
+    exit: i => ({ y: '100vh', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2} })
+}
+export const slideRight = {
+    initial: { x: 0 },
+    exit: i => ({ x: '200vh', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0 } })
 }
 
 export const slideDown = {
@@ -26,17 +30,6 @@ export const slideDown = {
     enter: i => ({ y: 0, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i } }),
     exit: i => ({ y: 'calc(-100vh - 150px)', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i } })
 }
-
-export const opacity = {
-    initial: {
-        opacity: 0
-    },
-    enter: {
-        opacity: 1,
-        transition: {duration: 1, delay: 0.2}
-    },
-}
-
 
 export const scale = {
     open: { scale: 1, transition: { duration: 0.3 } },

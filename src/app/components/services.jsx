@@ -2,9 +2,9 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section className="max-h-max w-[100vw] bg-white">
+    <section className="min-h-[100vh] w-[100vw] bg-white">
       <Text />
-      <section className="flex flex-col px-[10px] items-center lg:justify-evenly lg:flex-row gap-[10px] pb-[100px]">
+      <section className="flex flex-col px-[24px] items-center">
         {data.map((service, index) => (
           <Card
             key={index}
@@ -12,6 +12,9 @@ const Services = () => {
             heading={service.heading}
             desc={service.desc}
             tech={service.tech}
+            src={service.src}
+            no={service.no}
+            isLast={service.isLast}
           />
         ))}
       </section>
@@ -23,79 +26,90 @@ export default Services;
 
 const data = [
   {
-    img: "https://unblast.com/wp-content/uploads/2023/01/Industrial-iPhone-14-Mockup-1536x1152.jpg",
     heading: "Mobile App Development",
+    src: "https://non-standard.studio/media/pages/news/an-introduction/c44bde69fb-1690180289/nonstandard-_header_desktop_02_square.mp4",
     desc: "Years of mobile development expertise empower us to design robust architectures and create custom React Native apps, ensuring compatibility on both iOS and Android.",
-    tech: ["React Native", "MongoDb", "PostgreSql", "NodeJs"],
+    tech: ["React Native", "NodeJs", "MongoDb", "PostgreSql"],
+    no: "I.",
   },
   {
-    img: "https://unblast.com/wp-content/uploads/2019/01/Website-Mockup-1600x1189.jpg",
     heading: "Web Development",
+    src: "https://non-standard.studio/media/pages/news/press-rmit-ugcd-graduate-showcase/b15a877c71-1687408859/rmit_press_2023.mp4",
     desc: "Crafting adaptive design components with meticulous code, we prioritize optimizing development for seamless functionality across devices and browsers.",
-    tech: ["ReactJs", "NextJs", "NodeJs", "MongoDb", "PostgreSql"],
+    tech: ["React", "NodeJs", "MongoDb", "PostgreSql"],
+    no: "II.",
   },
   {
-    img: "https://unblast.com/wp-content/uploads/2023/06/Essential-Branding-Mockup-1536x1152.jpg",
     heading: "Design Solutions",
+    src: "https://non-standard.studio/media/pages/news/open-opportunities-for-mid-weight-senior-designers/1996e413cf-1687755883/nonstandard-_news_05-n-0623-0_square.mp4",
     desc: "Fueled by user-centered design, we boost productivity and revenue with remarkable expertise. Always surpassing our previous achievements, our ingenuity sets us apart.",
     tech: [
       "Figma",
-      "Adobe AfterEffects",
+      "Sketch",
+      "Adobe XD",
+      "Adobe Photoshop",
       "Adobe Illustrator",
+      "Adobe After Effects",
       "Blender",
       "Cinema 4D",
     ],
+    no: "III.",
+    isLast: true,
   },
 ];
 
-const Card = ({ img, heading, desc, tech }) => {
+const Card = ({ heading, desc, tech, src, no, isLast }) => {
   return (
-    <div
-      className="lg:w-[33%] w-full w-[100%] h-[500px] rounded-[12px] bg-cover z-[0] text-white transition-all duration-500 relative group overflow-hidden"
-      style={{ backgroundImage: `url(${img})` }}
-    >
-      <div
-        className="absolute top-0 left-0 h-full w-full z-[0]"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 70%)",
-        }}
-      ></div>
-
-      <div className="h-full w-full aboslute top-0 left-0 p-[25px] flex flex-col z-[2] relative">
-        <h1 className="h-[20%] text-[28px] normalFont">{heading}</h1>
-        <div className="h-[60%] normalFont relative">
-          <p className="absolute bottom-[20px] normalFont text-[14px]">{desc}</p>
+    <section className={`w-full ${isLast? 'border-y' : 'border-t'} border-black pt-[1rem] pb-[4rem] max-h-max md:h-[400px] max-h-max flex`}>
+      <div className="w-[10%] md:w-[25%] h-full text-[13px] normalFont uppercase">
+        {no}
+      </div>
+      <div className="h-full w-[90%] md:min-w-[75%] flex md:flex-row flex-col gap-[10px]">
+        <div className="w-full md:w-[50%] h-full items-center text-[13px]">
+          <div className="flex gap-[10px] flex-col md:max-w-[70%]">
+            <p className="normalFont text-[16px] font-[600]">{heading}</p>
+            <p className="normalFont">{desc}</p>
+          </div>
         </div>
-        <div className="h-[20%] flex-wrap max-w-[100%] flex border-t border-white py-[20px]">
-          {tech.map((technology, index) => (
-            <span
-              key={index}
-              className="normalFont max-w-max h-[25px] rounded-[15px] px-[10px] py-[5px] m-[2px] bg-[rgba(255,255,255,0.4)] text-[13px] flex items-center justify-center"
+        <div className="h-full w-full md:w-[50%] gap-[10px] flex flex-col md:flex-row">
+        <div className="w-full md:w-[50%] h-full">
+            <video
+              className="max-h-[300px] w-full object-cover border-none lightBg"
+              autoPlay
+              loop
+              muted
+              controls={false}
             >
-              {technology}
-            </span>
-          ))}
+              <source src={src} type="video/mp4" />
+            </video>
+          </div>
+          <div className="w-[50%] h-full flex md:justify-center">
+            <div className="normalFont flex flex-col">
+              <span className="text-[13px] uppercase normalFont mb-[10px]">
+                Tech we use:{" "}
+              </span>
+              {tech.map((t, index) => (
+                <span key={index} className="text-[12px] normalFont">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const Text = () => {
   return (
-    <section className="w-full h-[calc(60vh+200px)] flex flex-col items-center justify-center px-[30px] py-[100px]">
-      <p className="w-full textT text-[6em] md:text-[9em] text-[#e3051a] italic text-center">
-        Our services
-      </p>
-      <img
-        src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/644fb4205dc7044588e2bba5_arrow_bottom.svg"
-        alt=""
-        className="my-[25px]"
-      />
-      <p className="max-w-[380px] text-[18px] text-[#e3051a] italic textT text-center">
-      We are a dynamic digital design and development company, dedicated to delivering exceptional services that align seamlessly with our clients' unique needs. Our forte comes to the forefront as we deeply understand and address the specific requirements of our clients. 
-      </p>
+    <section className="w-[100vw] max-h-max flex flex-row px-[24px] py-[24px] md:pt-[100px] md:pb-[24px]">
+      <span className="h-full uppercase lightBlack text-[13px] normalFont">
+        002/&nbsp;&nbsp;
+      </span>
+      <span className="h-full uppercase text-black text-[13px] normalFont">
+        What we do best
+      </span>
     </section>
   );
 };

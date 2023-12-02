@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,200&display=swap");
 
 * {
   font-family: "Courier Prime", monospace;
@@ -15,27 +14,24 @@
   user-select: none;
 }
 
+body {
+  background-color: #000000;
+}
+
 .normalFont {
   font-family: sans-serif;
 }
 
 .boldFont {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, sans-serif;
 }
 
 .lightBlack {
-  color: #e1e1e1;
+  color: #6c6c74;
 }
 
 .lightBg {
   background-color: #000000;
-}
-
-.textT {
-  letter-spacing: -0.04em;
-  font-family: "Spectral", serif;
-  font-weight: 200;
-  line-height: 0.9;
 }
 
 textarea:focus, input:focus{
@@ -57,15 +53,9 @@ input:-webkit-autofill:active{
   gap: 3px !important;
 }
 
-@media (max-width: 767px) {
-  .responsiveWidth {
-    width: calc(100% - 20px);
-  }
-}
-
 @media (min-width: 48rem) {
   .customFontSize {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.3em;
     margin-bottom: 6vw;
     margin-top: 3vw;

@@ -2,32 +2,20 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] justify-evenly lightBg pb-[100px]">
+    <section className="w-[100vw] max-h-max min-h-[100vh] flex flex-col gap-[12px] justify-evenly bg-white">
       <Text />
-      <div className="w-full flex flex-col gap-[50px] md:px-[50px] px-[12px] justify-center md:items-center">
+      <div className="w-full flex flex-col md:flex-row gap-[24px] px-[24px] justify-center md:items-center">
         <Card
           src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6465092857ac82c18e520810_Main%20Video-transcode.mp4"
-          whatWeDid={["website", "app", "UI/UX"]}
+          whatWeDid="website, app, UI/UX"
           title="Olam Capital"
           desc="Explanation within visual content."
         />
         <Card
           src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/6468ee6491fa23c272150181_tagion_case-transcode.mp4"
-          whatWeDid={["UI/UX"]}
+          whatWeDid="UI/UX"
           title="Taigon"
           desc="Inspiration through brand and community."
-        />
-        <Card
-          src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/646ddfa7f5f28af14e297c59_lilith_main-transcode.mp4"
-          whatWeDid={["app", "UI/UX"]}
-          title="Lilith Games"
-          desc="Performance created by immersive visuals and person-centric content."
-        />
-        <Card
-          src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/65294c09bc3127bcc5786cbd_Irys%2030%20sec%20loop-transcode.mp4"
-          whatWeDid={["app", "UI/UX"]}
-          title="Irys"
-          desc="Redefining brands of the future."
         />
       </div>
     </section>
@@ -36,38 +24,27 @@ const Projects = () => {
 
 export default Projects;
 
-const Card = ({ src, whatWeDid, title, desc }) => {
+const Card = ({ src, whatWeDid, title }) => {
   return (
-    <div className="w-[100%] max-h-max relative overflow-hidden group z-[1]">
-      <div className="w-full md:h-[630px] h-[70vh] bg-[#e3e8ea] rounded-[5px] relativez-[0]">
+    <div className="w-[100%] md:w-[50%] max-h-max relative group z-[1] pb-[48px] border-b border-black hover:border-red-600 transition-all duration-500 group cursor-pointer">
+      <span className="absolute bottom-0 right-0 uppercase text-[13px] lightBlack py-[4px] group-hover:text-red-600 transition-all duration-500">More</span>
+      <div className="w-full bg-[#e3e8ea] aspect-[3/2] overflow-hidden">
         <video
           src={src}
           autoPlay
           loop
           muted
           controls={false}
-          className="h-full w-full object-cover rounded-[5px]"
+          className="h-full w-full object-cover"
         ></video>
       </div>
       <div class="mt-4 max-h-max">
-        <div class="flex space-x-2 mb-3">
-          {whatWeDid?.map((item, index) => (
-            <span
-              className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl"
-              key={index}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-        <div class="2xl:space-y-3">
-          <h3 class="text-works-title 2xl:text-5xl font-medium uppercase text-primary-200">
-            {title}
-          </h3>
-          <p class="text-body-2 2xl:text-4xl font-light text-primary-400">
-            {desc}
-          </p>
-        </div>
+        <h3 class="text-[15px] normalFont uppercase">{title}</h3>
+        <span
+          className="lightBlack text-[13px] normalFont uppercase"
+        >
+          {whatWeDid}
+        </span>
       </div>
     </div>
   );
@@ -75,20 +52,13 @@ const Card = ({ src, whatWeDid, title, desc }) => {
 
 const Text = () => {
   return (
-    <section className="w-full h-[calc(60vh+200px)] flex flex-col items-center lightBg justify-center px-[30px] py-[100px]">
-      <p className="w-full textT text-[6em] md:text-[9em] text-[#e3051a] italic text-center">
-        Featured works
-      </p>
-      <img
-        src="https://assets-global.website-files.com/642acc59fa552a1328890eb7/644fb4205dc7044588e2bba5_arrow_bottom.svg"
-        alt=""
-        className="my-[25px]"
-      />
-      <p className="max-w-[380px] text-[18px] text-[#e3051a] italic textT text-center">
-        Explore our standout projects in the Featured Works section, showcasing
-        our expertise in digital design and development. Each project reflects
-        our commitment to innovation across diverse industries.
-      </p>
+    <section className="w-[100vw] max-h-max flex flex-row px-[24px] py-[24px] md:pt-[100px] md:pb-[24px]">
+      <span className="h-full uppercase lightBlack text-[13px] normalFont">
+        003/&nbsp;&nbsp;
+      </span>
+      <span className="h-full uppercase text-black text-[13px] normalFont">
+        Selected works
+      </span>
     </section>
   );
 };

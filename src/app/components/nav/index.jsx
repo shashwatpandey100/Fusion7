@@ -45,6 +45,7 @@ const Navbar = () => {
   };
   const closeMenu = () => {
     setMenuOpen(false);
+    setContactOpen(false);
   };
   const openContact = () => {
     setContactOpen(true);
@@ -52,6 +53,7 @@ const Navbar = () => {
   };
   const closeContact = () => {
     setContactOpen(false);
+    setMenuOpen(false);
   };
 
   return (
@@ -86,7 +88,6 @@ const Navbar = () => {
       <AnimatePresence mode="wait">
         {menuOpen && (
           <>
-           <Blur closeMenu={closeMenu} />
             <motion.div
               variants={menuSlide}
               initial="initial"
@@ -95,12 +96,12 @@ const Navbar = () => {
               className="menu w-[100%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[35%]"
             >
               <Curve type="nav" />
-              <div
+              <span
                 onClick={closeMenu}
-                className="text-[34px] cursor-pointer absolute top-3 left-3 z-[15] hover:scale-[0.8] transition duration-500"
+                className="absolute top-3 left-3 text-[25px] cursor-pointer z-[99] hover:scale-[0.8] transition duration-500"
               >
                 <IoCloseOutline />
-              </div>
+              </span>
               <div className="body">
                 <div className="nav">
                   {navItems.map((data, index) => {
@@ -115,31 +116,26 @@ const Navbar = () => {
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
+        {(contactOpen || menuOpen) && <Blur closeMenu={closeMenu} />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
         {contactOpen && (
           <>
             <section
               className="flex w-[100vw] z-[12] fixed top-0 left-0"
               onClick={closeContact}
-            >
-              <Blur />
-            </section>
+            ></section>
 
             <motion.div
               variants={contactSlide}
               initial="initial"
               animate="enter"
               exit="exit"
-              className="h-screen w-[100%] sm:w-[85%] lg:w-[75%] bg-white fixed right-0 top-0 z-50 p-[5px] lg:px-[40px] md:py-[10px]"
+              className="h-screen w-[100%] sm:w-[50%] lg:w-[40%] bg-white fixed right-0 top-0 z-50 p-[5px] lg:px-[12px] md:py-[10px]"
             >
               <Curve type="contact" />
               <div className="box-border h-full flex flex-col justify-between">
-                <div
-                  onClick={closeContact}
-                  className="text-[34px] cursor-pointer absolute top-3 right-3 z-[99] hover:scale-[0.8] transition duration-500"
-                >
-                  <IoCloseOutline />
-                </div>
-                <Contact />
+                <Contact closeContact={closeContact} />
               </div>
             </motion.div>
           </>

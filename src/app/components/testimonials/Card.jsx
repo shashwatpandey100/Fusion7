@@ -9,15 +9,15 @@ const Card = ({ stars, text, name, position }) => {
   }
 
   return (
-    <div className="mx-[10px] responsiveWidth h-[80vh] bg-[#e3e8ea] rounded-[25px] overflow-hidden cursor-pointer">
+    <div className="mx-[10px] h-[70vh] border border-black overflow-hidden cursor-pointer">
       <div className="w-[100%] relative min-h-[400px] h-[100%] md:pt-[2.86vw] md:pr-[2.38vw] md:pb-[2.38vw] md:pl-[2.38vw] pt-[35px] pr-[30px] pb-[35px] pl-[30px] flex flex-col">
-        <div className="bg-[#e3e8ea] h-[100%] w-[100%] flex flex-col justify-between">
+        <div className="h-[100%] w-[100%] flex flex-col justify-between">
           <div className="flex">
             <div className="flex items-center">
               <span className="mb-[3px] inline-flex">
                 <svg
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 27"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

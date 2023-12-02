@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 
 export default function Index({ type }) {
 
-  const initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q-100 ${window.innerHeight / 2} 100 0`
-  const targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q100 ${window.innerHeight / 2} 100 0`
+  const isClient = typeof window !== 'undefined';
+  const initialPath = isClient ? `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q-100 ${window.innerHeight / 2} 100 0` : '';
+  const targetPath = isClient ? `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q100 ${window.innerHeight / 2} 100 0` : '';
 
   const curve = {
     initial: {
