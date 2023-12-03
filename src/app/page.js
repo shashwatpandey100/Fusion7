@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Testimonials from "./components/testimonials/index.jsx";
 import Intro from "./components/intro.jsx";
 import Projects from "./components/projects.jsx";

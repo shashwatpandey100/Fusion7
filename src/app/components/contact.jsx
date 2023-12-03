@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { BsArrowUpRight } from "react-icons/bs";
+import { MdArrowOutward } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
 
 const Contact = ({ closeContact }) => {
@@ -113,7 +113,7 @@ const Contact = ({ closeContact }) => {
               <p className="text-[13px] lg:text-[16px] text-black">
                 Our Email:{" "}
                 <a href="mailto:info@awsmd.com">
-                  <u>hello@fusion7.agency</u>
+                  <u>hello@aetherium.agency</u>
                 </a>
               </p>
               <div className="flex flex-col">
@@ -130,12 +130,12 @@ const Contact = ({ closeContact }) => {
                   >
                     <div className="absolute left-[-5px] top-[5px] -mt-1 ml-1 group-hover:animate-slant">
                       <span className="text-[36px] leading-[36px] font-[700]">
-                        <BsArrowUpRight />
+                        <MdArrowOutward />
                       </span>
                     </div>
                     <div className="absolute left-[-50px] top-[50px] -mt-1 ml-1 group-hover:animate-slant">
                       <span className="text-[36px] leading-[36px] font-[700]">
-                        <BsArrowUpRight />
+                        <MdArrowOutward />
                       </span>
                     </div>
                   </div>
