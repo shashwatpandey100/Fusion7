@@ -12,10 +12,6 @@ module.exports = {
           '0%': { transform: 'translateX(0px) translateY(0px)' },
           '100%': { transform: 'translateX(45px) translateY(-45px)' },
         },
-        'slantBig': {
-          '0%': { transform: 'translateX(0rem) translateY(0rem)' },
-          '100%': { transform: 'translateX(10rem) translateY(-10rem)' },
-        },
         'pendulum': {
           '0%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(-60deg)' },

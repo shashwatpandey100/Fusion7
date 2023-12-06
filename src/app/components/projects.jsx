@@ -44,7 +44,7 @@ const Card = ({ src, whatWeDid, title, bgSrc, desc }) => {
               whatWeDid.map((item, index) => (
                 <span
                   key={index}
-                  className="text-[10px] text-white uppercase rounded-full px-[15px] border border-white flex items-center justify-center hover:bg-[rgba(255,255,255,0.4)] hover:text-black transition-all duration-300"
+                  className="text-[10px] text-white uppercase rounded-[2px] px-[15px] border border-[rgba(255,255,255,0.25)] flex items-center justify-center hover:bg-[rgba(255,255,255,0.4)] hover:text-black transition-all duration-300"
                 >
                   {item}
                 </span>

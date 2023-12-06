@@ -74,7 +74,7 @@ const Card = ({ heading, desc, tech, src, no, isLast }) => {
         <div className="h-full w-full md:w-[50%] gap-[10px] flex flex-col md:flex-row">
         <div className="w-full md:w-[50%] h-full">
             <video
-              className="max-h-[300px] w-full object-cover border-none lightBg"
+              className="max-h-[300px] w-full object-cover border-none"
               autoPlay
               loop
               muted
