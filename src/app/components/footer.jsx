@@ -14,7 +14,7 @@ const TalkPage = () => {
   };
 
   return (
-      <section className="h-[100vh] w-[100vw] px-[24px] bg-white">
+      <section className="max-h-max md:h-[100vh] w-[100vw] px-[24px] bg-white">
         <div className="w-full h-[20%] flex">
           <div className="w-1/2 h-full flex flex-col justify-evenly py-[24px]">
             <span className="mb-[1rem] ">
@@ -54,14 +54,14 @@ const TalkPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[30%] flex items-center">
+        <div className="w-full max-h-max md:h-[30%] flex items-center">
           <img
             src="https://res.cloudinary.com/dw0bwetr1/image/upload/v1701785656/Screenshot_2023-12-05_at_19.40.51_axly6u.png"
             className="w-full mt-[24px]"
             alt=""
           />
         </div>
-        <div className="w-full h-[45%] py-[100px] flex gap-[3rem]">
+        <div className="w-full max-h-max md:h-[45%] py-[24px] md:py-[100px] flex gap-[3rem]">
           <div className="h-full w-[calc(100%/3)] flex flex-col">
             <span className="uppercase font-[600]">
               Let's bring something adorable to the world together.
