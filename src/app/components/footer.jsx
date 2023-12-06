@@ -57,7 +57,7 @@ const TalkPage = () => {
         <div className="w-full h-[30%] flex items-center">
           <img
             src="https://res.cloudinary.com/dw0bwetr1/image/upload/v1701785656/Screenshot_2023-12-05_at_19.40.51_axly6u.png"
-            className="w-full"
+            className="w-full mt-[24px]"
             alt=""
           />
         </div>
