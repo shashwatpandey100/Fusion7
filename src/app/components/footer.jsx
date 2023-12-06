@@ -15,7 +15,7 @@ const TalkPage = () => {
 
   return (
       <section className="max-h-max md:h-[100vh] w-[100vw] px-[24px] bg-white">
-        <div className="w-full h-[20%] flex">
+        <div className="w-full h-[20%] flex border-t border-black">
           <div className="w-1/2 h-full flex flex-col justify-evenly py-[24px]">
             <span className="mb-[1rem] ">
               <img
