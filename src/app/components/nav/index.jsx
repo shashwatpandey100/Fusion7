@@ -35,26 +35,7 @@ const navItems = [
   },
 ];
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
-
-  const openMenu = () => {
-    setMenuOpen(true);
-    setContactOpen(false);
-  };
-  const closeMenu = () => {
-    setMenuOpen(false);
-    setContactOpen(false);
-  };
-  const openContact = () => {
-    setContactOpen(true);
-    setMenuOpen(false);
-  };
-  const closeContact = () => {
-    setContactOpen(false);
-    setMenuOpen(false);
-  };
+const Navbar = ({openMenu, closeMenu, openContact, closeContact, menuOpen, contactOpen}) => {
 
   return (
     <>
