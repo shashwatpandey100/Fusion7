@@ -26,23 +26,23 @@ export default Services;
 
 const data = [
   {
-    heading: "Mobile App Development",
+    heading: "Web Design",
     src: "https://non-standard.studio/media/pages/news/an-introduction/c44bde69fb-1690180289/nonstandard-_header_desktop_02_square.mp4",
-    desc: "Years of mobile development expertise empower us to design robust architectures and create custom React Native apps, ensuring compatibility on both iOS and Android.",
-    tech: ["React Native", "NodeJs", "MongoDb", "PostgreSql"],
+    desc: "Crafting visually stunning and user-friendly interfaces, our web design services focus on delivering a seamless and engaging user experience.",
+    tech: ["Figma", "Sketch", "Adobe XD", "Adobe Photoshop"],
     no: "I.",
   },
   {
     heading: "Web Development",
     src: "https://non-standard.studio/media/pages/news/press-rmit-ugcd-graduate-showcase/b15a877c71-1687408859/rmit_press_2023.mp4",
-    desc: "Crafting adaptive design components with meticulous code, we prioritize optimizing development for seamless functionality across devices and browsers.",
-    tech: ["React", "NodeJs", "MongoDb", "PostgreSql"],
+    desc: "Creating adaptable design elements through precise coding, our focus is on enhancing development for smooth functionality across various devices and browsers.",
+    tech: ["ReactJS", "NextJS", "ViteJS", "NodeJS", "MongoDb", "Mongoose", "PostgreSql"],
     no: "II.",
   },
   {
-    heading: "Design Solutions",
+    heading: "Branding",
     src: "https://non-standard.studio/media/pages/news/open-opportunities-for-mid-weight-senior-designers/1996e413cf-1687755883/nonstandard-_news_05-n-0623-0_square.mp4",
-    desc: "Fueled by user-centered design, we boost productivity and revenue with remarkable expertise. Always surpassing our previous achievements, our ingenuity sets us apart.",
+    desc: "Crafting compelling brand identities that resonate with your target audience, our branding services go beyond aesthetics. We strategically guide businesses through user-centric design principles, elevating productivity and revenue. As we consistently surpass milestones, our distinctive ingenuity defines a unique position for your brand in the industry.",
     tech: [
       "Figma",
       "Sketch",
@@ -103,7 +103,7 @@ const Card = ({ heading, desc, tech, src, no, isLast }) => {
 
 const Text = () => {
   return (
-    <section className="w-[100vw] max-h-max flex flex-row px-[24px] py-[24px] md:pt-[100px] md:pb-[24px]">
+    <section className="w-[100vw] max-h-max flex flex-row px-[24px] py-[24px] md:mt-[100px] md:pb-[24px]">
       <span className="h-full uppercase lightBlack text-[13px] normalFont">
         002/&nbsp;&nbsp;
       </span>

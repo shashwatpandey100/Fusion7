@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { MdArrowOutward } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
+import constants from "./constants";
 
 const Contact = ({ closeContact }) => {
   const [state, handleSubmit] = useForm("xjvqajev");
@@ -84,7 +85,7 @@ const Contact = ({ closeContact }) => {
           >
             <div className="w-full max-h-max flex flex-col md:flex-row gap-[5px]">
               <input
-                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] text-gray-500 font-[300]"
+                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] text-black font-[300]"
                 type="text"
                 name="name"
                 placeholder="Name"
@@ -92,7 +93,7 @@ const Contact = ({ closeContact }) => {
                 required={true}
               />
               <input
-                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] text-gray-500 font-[300]"
+                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] text-black font-[300]"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -102,7 +103,7 @@ const Contact = ({ closeContact }) => {
             </div>
             <div className="w-full max-h-max flex md:gap-[5px]">
               <textarea
-                className={`w-[100%] h-[240px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] text-gray-500 font-[300]`}
+                className={`w-[100%] h-[240px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] text-black font-[300]`}
                 name="projectDetails"
                 placeholder="Project details"
                 onChange={handleInputChange}
@@ -113,7 +114,7 @@ const Contact = ({ closeContact }) => {
               <p className="text-[13px] lg:text-[16px] text-black">
                 Our Email:{" "}
                 <a href="mailto:info@awsmd.com">
-                  <u>hello@aetherium.agency</u>
+                  <u>{constants.email}</u>
                 </a>
               </p>
               <div className="flex flex-col">

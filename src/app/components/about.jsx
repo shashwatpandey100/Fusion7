@@ -4,24 +4,37 @@ const About = () => {
   return (
     <>
       <Text />
-      <section className="pb-[100px] w-[100vw] flex px-[24px]">
+      <section className="pb-[100px] w-[100vw] flex px-[24px] bg-white">
         <div className="w-1/2 max-h-max">
-          <span className="normalFont text-[16px]">Based in London, we are a Creative + Production Partner to brands and agencies worldwide, specialising in direction, design and moving image.</span>
+          <span className="normalFont text-[16px]">
+            Based in Delhi, we're a global digital agency specializing in
+            website and app design and development, dedicated to elevating your
+            brand's online presence.
+          </span>
         </div>
         <div className="w-1/2 max-h-max">
-          <p className="normalFont text-[16px]">Our ethos is to create attention-grabbing, design led content that inspires an emotional reaction, leaving a lasting impression. This is what we strive for in all our work – we call what we do ‘creativity that moves’.</p>
-          <p className="normalFont text-[14px] mt-[24px]">How we work matters as much to us as the end result – it’s why we’re proud to be known as a company that champions decency in what can be a demanding industry. </p>
-          <p className="normalFont text-[14px] mt-[24px] underline cursor-pointer">Read more about our people and culture.</p>
-          <p className="normalFont text-[16px] mt-[48px]">What we do</p>
-          <p className="normalFont text-[13px] mt-[12px]">Ideation, Concepting & Visual Development</p>
-          <p className="normalFont text-[13px]">Writing & Storytelling</p>
-          <p className="normalFont text-[13px]">Direction</p>
-          <p className="normalFont text-[13px]">Motion Design</p>
-          <p className="normalFont text-[13px]">3D</p>
-          <p className="normalFont text-[13px]">2D</p>
-          <p className="normalFont text-[13px]">Illustration</p>
-          <p className="normalFont text-[13px]">Key Art</p>
-          <p className="normalFont text-[13px]">Content Production</p>
+          <p className="normalFont text-[16px]">
+            We craft attention-grabbing, research-led digital assets that evokes
+            emotions, aiming for a lasting impression. Our core philosophy
+            revolves around "Navigating through Innovation," signifying our
+            unwavering dedication across every project.
+          </p>
+          <p className="normalFont text-[16px] mt-[24px]">
+            Our focus extends beyond results to value the process. We embrace a
+            reputation for fostering decency in an often demanding industry.
+          </p>
+          <p className="normalFont text-[16px] mt-[48px]">Our approach:</p>
+          <p className="normalFont text-[14px] mt-[12px]">Step 1: &nbsp; Discovery and Research</p>
+          <p className="normalFont text-[14px]">Step 2: &nbsp; Strategic Planning</p>
+          <p className="normalFont text-[14px]">Step 2: &nbsp; Design and Prototyping</p>
+          <p className="normalFont text-[14px]">Step 3: &nbsp; Client Feedback and Revisions</p>
+          <p className="normalFont text-[14px]">Step 4: &nbsp; Development</p>
+          <p className="normalFont text-[14px]">Step 5: &nbsp; Testing</p>
+          <p className="normalFont text-[14px]">Step 6: &nbsp; Client Review</p>
+          <p className="normalFont text-[14px]">Step 7: &nbsp; Launch</p>
+          <p className="normalFont text-[14px]">Step 8: &nbsp; Post-Launch Support</p>
+          <p className="normalFont text-[14px]">Step 9: &nbsp; Evaluation and Feedback</p>
+          <p className="normalFont text-[14px]">Step 10: &nbsp; Building Long-Term Relationships</p>
         </div>
       </section>
     </>
@@ -32,7 +45,7 @@ export default About;
 
 const Text = () => {
   return (
-    <section className="w-[60%] max-h-max flex flex-row py-[24px] px-[24px] md:pt-[100px] md:pb-[24px]">
+    <section className="w-[60%] max-h-max flex flex-row py-[24px] px-[24px] md:mt-[100px] md:pb-[24px] bg-white">
       <span className="h-full uppercase lightBlack text-[13px] normalFont">
         001/&nbsp;&nbsp;
       </span>

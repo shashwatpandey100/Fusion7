@@ -5,38 +5,25 @@ import { AnimatePresence, motion } from "framer-motion";
 import { menuSlide } from "./anim";
 import { contactSlide } from "./anim";
 import { HiOutlineChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
-import Link from "./Link";
 import Curve from "./Curve";
 import Footer from "./Footer";
 import { IoCloseOutline } from "react-icons/io5";
 import Contact from "../contact";
 import Blur from "./Blur";
 
-const navItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Services",
-    href: "/services",
-  },
-  {
-    title: "Works",
-    href: "/work",
-  },
-  {
-    title: "Testimonials",
-    href: "/testimonials",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
-];
-
-const Navbar = ({openMenu, closeMenu, openContact, closeContact, menuOpen, contactOpen}) => {
-
+const Navbar = ({
+  openMenu,
+  closeMenu,
+  openContact,
+  closeContact,
+  menuOpen,
+  contactOpen,
+  goToIntro,
+  goToAbout,
+  goToServices,
+  goToProjects,
+  goToContact
+}) => {
   return (
     <>
       <section>
@@ -76,18 +63,20 @@ const Navbar = ({openMenu, closeMenu, openContact, closeContact, menuOpen, conta
               exit="exit"
               className="menu w-[100%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[35%]"
             >
-              <Curve type="nav" />
               <span
                 onClick={closeMenu}
                 className="absolute top-3 left-3 text-[25px] cursor-pointer z-[99] hover:scale-[0.8] transition duration-500"
               >
                 <IoCloseOutline />
               </span>
+              <Curve type="nav" />
               <div className="body">
                 <div className="nav">
-                  {navItems.map((data, index) => {
-                    return <Link key={index} data={{ ...data, index }}></Link>;
-                  })}
+                  <span className="cursor-pointer" onClick={goToIntro}>Home</span>
+                  <span className="cursor-pointer" onClick={goToAbout}>About</span>
+                  <span className="cursor-pointer" onClick={goToServices}>Services</span>
+                  <span className="cursor-pointer" onClick={goToProjects}>Projects</span>
+                  <span className="cursor-pointer" onClick={goToContact}>Contact us</span>
                 </div>
                 <Footer />
               </div>

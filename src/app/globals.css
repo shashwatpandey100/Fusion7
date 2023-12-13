@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 * {
-  font-family: "Courier Prime", monospace;
+  font-family: monospace;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #ffffff;
+}
+
 ::selection {
-  background: #44f79b !important;
-  color: #0c0c0b !important;
+  background: #9204c1 !important;
+  color: #fff !important;
 }
 
 img {
@@ -35,7 +37,7 @@ img {
 }
 
 .lightBg {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 textarea:focus, input:focus{
@@ -47,7 +49,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
+    -webkit-text-fill-color: #000000;
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: none;
 }

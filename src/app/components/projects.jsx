@@ -1,8 +1,9 @@
 import React from "react";
+import Link from 'next/link'
 
 const Projects = () => {
   return (
-    <section className="w-[100vw] max-h-max min-h-[100vh] flex flex-col gap-[12px] justify-evenly bg-white">
+    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white mt-[24px] md:mt-[100px]">
       <Text />
       <div className="w-full flex flex-col md:flex-row gap-[24px] px-[24px] justify-center md:items-center">
         <Card
@@ -11,13 +12,15 @@ const Projects = () => {
           whatWeDid={["UI/UX", "Web Design", "Web Development"]}
           title="Polène"
           desc="Online flagship store"
+          link='https://eng.polene-paris.com'
         />
         <Card
           src="https://live.springsummer.dk/media/uploads/SR_Scroll_Through.mp4#t=0.001"
           bgSrc="https://springsummer.imgix.net/uploads/Background-image_2023-06-05-094015_kwjv.jpg?auto=compress%2Cformat&fit=clip&q=35&w=1440"
-          whatWeDid={["UI/UX", "Web Design"]}
+          whatWeDid={["UI/UX", "Web Design", "Web Development"]}
           title="Screen Rose Studio"
           desc="A tailored portfolio"
+          link='https://www.sorenrose.com'
         />
       </div>
     </section>
@@ -26,9 +29,9 @@ const Projects = () => {
 
 export default Projects;
 
-const Card = ({ src, whatWeDid, title, bgSrc, desc }) => {
+const Card = ({ src, whatWeDid, title, bgSrc, desc, link }) => {
   return (
-    <div className="w-[100%] md:w-[50%] h-[80vh] relative group z-[1] group cursor-pointer">
+    <a className="w-[100%] md:w-[50%] h-[80vh] relative group z-[1] group cursor-pointer" href={link} target="_blank">
       <div
         className="absolute top-0 left-0 h-full w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${bgSrc})` }}
@@ -62,19 +65,24 @@ const Card = ({ src, whatWeDid, title, bgSrc, desc }) => {
           className="h-[95%] max-w-[95%] z-[2]"
         ></video>
       </div>
-    </div>
+    </a>
   );
 };
 
 const Text = () => {
   return (
-    <section className="w-[100vw] max-h-max flex flex-row px-[24px] py-[24px] md:pt-[100px] md:pb-[24px]">
+    <section className="w-[100vw] max-h-max flex justify-between px-[24px] py-[24px] md:pb-[24px]">
+      <div className="flex">
       <span className="h-full uppercase lightBlack text-[13px] normalFont">
         003/&nbsp;&nbsp;
       </span>
       <span className="h-full uppercase text-black text-[13px] normalFont">
         Selected works
       </span>
+      </div>
+      <Link href={'/allProjects'} className="h-full uppercase text-black text-[13px] normalFont cursor-pointer hover:text-[#9204c1]">
+        (See all)
+      </Link>
     </section>
   );
 };

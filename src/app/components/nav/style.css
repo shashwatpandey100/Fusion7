@@ -46,13 +46,13 @@
     }
 }
 
-.menu .body .nav a {
+.menu .body .nav a, .menu .body .nav span {
     text-decoration: none;
     color: rgb(30, 30, 30);
     font-weight: 300;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.menu .body .nav a:hover {
+.menu .body .nav a:hover, .menu .body .nav span:hover {
     text-decoration: underline;
 }

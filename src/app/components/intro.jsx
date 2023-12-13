@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
+import constants from "./constants";
 const Intro = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [formattedTime, setFormattedTime] = useState("");
@@ -28,12 +28,21 @@ const Intro = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1;
+    }
+  }, []);
+
   return (
     <section className="w-screen h-[100vh] lightBg relative">
       <section className="h-[100vh] w-[100vw] lightBg mx-auto absolute top-0 left-0">
         <video
-          src="https://tuxkarma.co/wp-content/themes/karma/video/fond.mp4"
-          poster="https://res.cloudinary.com/dw0bwetr1/image/upload/v1701757295/Screenshot_2023-12-05_at_11.48.39_afi4wn.png"
+          ref={videoRef}
+          // src="https://res.cloudinary.com/dw0bwetr1/video/upload/v1701888213/Gradient_45_pktss0.mp4"
+          src="https://assets-global.website-files.com/6475c270c3f3fd0a9eb15db5/647a3fd21d79da9cc0b8fdc5_3D%20Bubbles-transcode.mp4"
           className="h-full w-full object-cover border-none lightBg"
           autoPlay
           loop
@@ -77,7 +86,7 @@ const Intro = () => {
               className="max-h-max font-[300] flex gap-3 uppercase text-[10px] lg:text-[12px] lightBlack"
               style={{ mixBlendMode: "difference" }}
             >
-              <a href="https://www.youtube.com/@Fusion7Studios" target="_blank">
+              <a href={constants.youtube} target="_blank">
                 <p
                   className="hover:underline leading-tight w-full"
                   style={{ color: "white" }}
@@ -86,7 +95,7 @@ const Intro = () => {
                 </p>
               </a>
               <a
-                href="https://www.instagram.com/fusion7studio/"
+                href={constants.instagram}
                 target="_blank"
               >
                 <p
@@ -96,7 +105,7 @@ const Intro = () => {
                   INSTAGRAM
                 </p>
               </a>
-              <a href="https://dribbble.com/Fusion7" target="_blank">
+              <a href={constants.dribble} target="_blank">
                 <p
                   className="hover:underline leading-tight w-full"
                   style={{ color: "white" }}
@@ -105,7 +114,7 @@ const Intro = () => {
                 </p>
               </a>
               <a
-                href="https://www.linkedin.com/in/fusion7-studio-b8095a29b/"
+                href={constants.linkedin}
                 target="_blank"
               >
                 <p
