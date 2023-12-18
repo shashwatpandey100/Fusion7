@@ -44,10 +44,10 @@ const Intro = () => {
           // src="https://res.cloudinary.com/dw0bwetr1/video/upload/v1701888213/Gradient_45_pktss0.mp4"
           src="https://assets-global.website-files.com/6475c270c3f3fd0a9eb15db5/647a3fd21d79da9cc0b8fdc5_3D%20Bubbles-transcode.mp4"
           className="h-full w-full object-cover border-none lightBg"
-          autoPlay
-          loop
-          muted
-          controls={false}
+          autoPlay={true}
+        loop={true}
+        muted={true}
+        controls={false}
         ></video>
       </section>
       <div className="h-[100vh] w-[100vw] z-[-2]">

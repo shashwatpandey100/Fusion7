@@ -16,9 +16,9 @@ const ContactSection = ({ openContact }) => {
         ref={videoRef}
         // src="https://res.cloudinary.com/dw0bwetr1/video/upload/v1701888213/Gradient_45_pktss0.mp4"
         src="https://assets-global.website-files.com/6475c270c3f3fd0a9eb15db5/647a3fd21d79da9cc0b8fdc5_3D%20Bubbles-transcode.mp4"
-        autoPlay
-        loop
-        muted
+        autoPlay={true}
+        loop={true}
+        muted={true}
         controls={false}
         className="h-full w-full object-cover border-none lightBg"
       ></video>

@@ -8,7 +8,7 @@ const About = () => {
         <div className="w-1/2 max-h-max">
           <span className="normalFont text-[16px]">
             Based in Delhi, we're a global digital agency specializing in
-            website and app design and development, dedicated to elevating your
+            web design and development, dedicated to elevating your
             brand's online presence.
           </span>
         </div>

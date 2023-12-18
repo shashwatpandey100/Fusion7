@@ -10,6 +10,7 @@ import Footer from "./components/footer.jsx";
 import About from "./components/about.jsx";
 import ContactSection from "./components/contactSection.jsx";
 import Navbar from "./components/nav/index.jsx";
+import Blog from "./components/blog.jsx";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function Home() {
   const services = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
+  const blog = useRef(null);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -28,6 +30,9 @@ export default function Home() {
     });
   };
 
+  const goToHome = () => {
+    window.location.href = "/";
+  };
   const goToIntro = () => {
     closeMenu();
     scrollToSection(intro);
@@ -47,6 +52,10 @@ export default function Home() {
   const goToContact = () => {
     closeMenu();
     scrollToSection(contact);
+  };
+  const goToBlog = () => {
+    closeMenu();
+    scrollToSection(blog);
   };
 
   const openMenu = () => {
@@ -85,6 +94,8 @@ export default function Home() {
             goToServices={goToServices}
             goToProjects={goToProjects}
             goToContact={goToContact}
+            goToBlog={goToBlog}
+            goToHome={goToHome}
           />
           <section ref={intro}>
             <Intro />
@@ -101,6 +112,9 @@ export default function Home() {
           <section ref={contact}>
             <ContactSection openContact={openContact} />
           </section>
+          <section ref={blog}>
+            <Blog />
+          </section>
           <section>
             <Footer
               openContact={openContact}
@@ -108,6 +122,7 @@ export default function Home() {
               goToAbout={goToAbout}
               goToServices={goToServices}
               goToProjects={goToProjects}
+              goToHome={goToHome}
             />
           </section>
         </section>

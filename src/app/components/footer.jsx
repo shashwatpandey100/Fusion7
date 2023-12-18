@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import constants from "./constants.js";
 import { useForm, ValidationError } from "@formspree/react";
@@ -9,6 +10,7 @@ const TalkPage = ({
   goToAbout,
   goToServices,
   goToProjects,
+  goToHome,
 }) => {
   const scrollToTop = () => {
     const audio = new Audio("https://one-is.com/audio/selected/list.m4a");
@@ -33,47 +35,57 @@ const TalkPage = ({
   };
 
   return (
-    <section className="max-h-max w-[100vw] px-[24px] bg-white">
-      <div className="flex flex-col pt-[48px]">
-        <span className="w-full uppercase font-[600]">DIVE INTO OUR INKED INSIGHTS WITH — THE/INKWELL</span>
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col md:flex-row w-[100%] h-[100%] gap-[5px] pt-[24px]"
-        >
-          <input
-                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] md:text-[17px] font-[300] text-black"
-                type="email"
-                name="email"
-                placeholder="Email"
-                onChange={handleInputChange}
-                required={true}
-              />
-              <div className="md:w-[50%] w-[100%] h-[44px] relative flex items-center">
+    <section className="max-h-max w-[100vw] pt-[36px] px-[24px] bg-[rgba(0,0,0,0.05)]">
+      <div className="flex flex-col pt-[24px]">
+        <span className="w-full uppercase font-[600]">
+          DIVE INTO OUR INKED INSIGHTS WITH — THE/INKWELL
+        </span>
+        {state.succeeded ? (
+          <div className="flex h-[64px] w-[100%] gap-[5px] mt-[24px] flex items-center relative">
+            <span className="absolute right-0">
+              You are now subscribed to the INKWELL
+            </span>
+          </div>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col md:flex-row md:items-center justify-center w-[100%] h-[64px] gap-[5px] mt-[24px]"
+          >
+            <input
+              className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[13px] font-[300] text-black"
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handleInputChange}
+              required={true}
+            />
+            <div className="md:w-[50%] w-[100%] h-[44px] relative flex items-center">
               <button
-                  type="submit"
-                  disabled={state.submitting}
-                  className="flex group absolute right-0"
+                type="submit"
+                disabled={state.submitting}
+                className="flex group absolute right-0"
+              >
+                <p className="underline uppercase text-[36px] lg:leading-[36px] leading-[26px] font-[700] text-[#2c2c2c]">
+                  Subscribe
+                </p>
+                <div
+                  className={`pt-1 pl-2 relative group w-[46px] h-[46px] overflow-hidden text-[#2c2c2c]`}
                 >
-                  <p className="underline uppercase text-[36px] lg:leading-[36px] leading-[26px] font-[700] text-[#2c2c2c]">
-                    Subscribe
-                  </p>
-                  <div
-                    className={`pt-1 pl-2 relative group w-[46px] h-[46px] overflow-hidden text-[#2c2c2c]`}
-                  >
-                    <div className="absolute left-[-5px] top-[5px] -mt-1 ml-1 group-hover:animate-slant">
-                      <span className="text-[36px] leading-[36px] font-[700]">
-                        <MdArrowOutward />
-                      </span>
-                    </div>
-                    <div className="absolute left-[-50px] top-[50px] -mt-1 ml-1 group-hover:animate-slant">
-                      <span className="text-[36px] leading-[36px] font-[700]">
-                        <MdArrowOutward />
-                      </span>
-                    </div>
+                  <div className="absolute left-[-5px] top-[5px] -mt-1 ml-1 group-hover:animate-slant">
+                    <span className="text-[36px] leading-[36px] font-[700]">
+                      <MdArrowOutward />
+                    </span>
                   </div>
-                </button>
-              </div>
-        </form>
+                  <div className="absolute left-[-50px] top-[50px] -mt-1 ml-1 group-hover:animate-slant">
+                    <span className="text-[36px] leading-[36px] font-[700]">
+                      <MdArrowOutward />
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </form>
+        )}
       </div>
       <div className="w-full max-h-max md:h-[45%] py-[12px] md:pt-[48px] md:pb-[192px] flex gap-[3rem]">
         <div className="h-full w-[calc(100%/3)] flex flex-col">
@@ -111,25 +123,25 @@ const TalkPage = ({
               Menu
             </span>
             <span
-              onClick={goToIntro}
+              onClick={goToIntro || goToHome}
               className="uppercase text-[12px] hover:text-[#9204c1] leading-[22px] cursor-pointer"
             >
               Home
             </span>
             <span
-              onClick={goToAbout}
+              onClick={goToAbout || goToHome}
               className="uppercase text-[12px] hover:text-[#9204c1] leading-[22px] cursor-pointer"
             >
               About
             </span>
             <span
-              onClick={goToProjects}
+              onClick={goToProjects || goToHome}
               className="uppercase text-[12px] hover:text-[#9204c1] leading-[22px] cursor-pointer"
             >
               Projects
             </span>
             <span
-              onClick={goToServices}
+              onClick={goToServices || goToHome}
               className="uppercase text-[12px] hover:text-[#9204c1] leading-[22px] cursor-pointer"
             >
               Services

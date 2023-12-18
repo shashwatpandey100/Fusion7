@@ -22,7 +22,8 @@ const Navbar = ({
   goToAbout,
   goToServices,
   goToProjects,
-  goToContact
+  goToContact,
+  goToHome,
 }) => {
   return (
     <>
@@ -72,11 +73,11 @@ const Navbar = ({
               <Curve type="nav" />
               <div className="body">
                 <div className="nav">
-                  <span className="cursor-pointer" onClick={goToIntro}>Home</span>
-                  <span className="cursor-pointer" onClick={goToAbout}>About</span>
-                  <span className="cursor-pointer" onClick={goToServices}>Services</span>
-                  <span className="cursor-pointer" onClick={goToProjects}>Projects</span>
-                  <span className="cursor-pointer" onClick={goToContact}>Contact us</span>
+                  <span className="cursor-pointer" onClick={goToIntro || goToHome}>Home</span>
+                  <span className="cursor-pointer" onClick={goToAbout || goToHome}>About</span>
+                  <span className="cursor-pointer" onClick={goToServices || goToHome}>Services</span>
+                  <span className="cursor-pointer" onClick={goToProjects || goToHome}>Projects</span>
+                  <span className="cursor-pointer" onClick={goToContact || goToHome}>Contact us</span>
                 </div>
                 <Footer />
               </div>
