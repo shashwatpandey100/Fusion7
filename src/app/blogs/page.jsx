@@ -59,7 +59,7 @@ const BlogContent = () => {
   return (
     <>
     <Text />
-    <div className="w-[100vw] flex flex-wrap px-4 justify-center">
+    <div className="w-[100vw] flex flex-wrap gap-[24px] px-[12px] justify-center">
       {cards.map((card) => {
         return <Card card={card} key={card.id} />;
       })}

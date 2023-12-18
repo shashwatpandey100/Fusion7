@@ -52,7 +52,7 @@ const Intro = () => {
       </section>
       <div className="h-[100vh] w-[100vw] z-[-2]">
         <section className="w-screen h-screen flex flex-col items-center justify-center p-2 lg:p-6 relative">
-          <p className="text-[3em] text-center boldFont md:leading-[120px] lg:leading-[180px] md:text-[8em] lg:text-[12em] tracking-tight text-white uppercase">
+          <p className="text-[3em] text-center boldFont md:leading-[110px] lg:leading-[130px] md:text-[5em] lg:text-[8em] text-white uppercase">
             YOUR DIGITAL FUTURE WELL BUILT
           </p>
           <div className="flex mt-5 justify-between flex items-center md:max-w-max">

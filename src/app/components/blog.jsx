@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Blog = () => {
   return (
-    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white py-[24px] md:py-[100px]">
+    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white mt-[24px] md:mt-[100px]">
       <Text />
       <div className="w-full flex flex-col md:flex-row gap-[24px] px-[24px] justify-center md:items-center">
         {cards.map((card) => {
@@ -19,7 +19,7 @@ export default Blog;
 
 const Card = ({ card }) => {
   return (
-    <div className="w-[100%] md:w-[calc(50%-48px)] m-[24px] max-h-max min-h-[50vh] relative z-[1] flex flex-col">
+    <div className="w-[100%] md:w-[calc(50%-24px)] m-[0px] max-h-max min-h-[50vh] relative z-[1] flex flex-col">
       <div
         className="h-[50vh] w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${card.bgSrc})` }}
