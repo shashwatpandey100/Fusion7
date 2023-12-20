@@ -10,7 +10,6 @@ const Preloader = () => {
     const duration = 3000;
     const steps = 100;
     const intervalDuration = duration / steps;
-    console.log(intervalDuration);
 
     const interval = setInterval(() => {
       setCounter((prevCounter) => {

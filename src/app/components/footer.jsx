@@ -146,6 +146,12 @@ const TalkPage = ({
             >
               Services
             </span>
+            <span
+              onClick={()=> window.location.href = "/blogs"}
+              className="uppercase text-[12px] hover:text-[#9204c1] leading-[22px] cursor-pointer"
+            >
+              Blogs
+            </span>
           </div>
           <div className="h-full w-full flex flex-col">
             <span className="mb-[24px] uppercase text-[14px] font-[600]">

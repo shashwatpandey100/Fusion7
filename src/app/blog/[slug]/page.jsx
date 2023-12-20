@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/nav";
-import Footer from "../components/footer";
-import { Card } from "../components/blog";
+import Navbar from "../../components/nav";
+import Footer from "../../components/footer";
 import { Client, Databases, Query } from "appwrite";
 const client = new Client();
 
@@ -10,7 +9,7 @@ client
   .setEndpoint("https://cloud.appwrite.io/v1")
   .setProject("655e3eee8059e4984924");
 
-const Blogs = () => {
+const BlogPage = ({params}) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
@@ -34,7 +33,6 @@ const Blogs = () => {
     setContactOpen(false);
     setMenuOpen(false);
   };
-
   return (
     <>
       <Navbar
@@ -46,7 +44,7 @@ const Blogs = () => {
         closeContact={closeContact}
         goToHome={goToHome}
       />
-      <BlogContent />
+      <BlogPageContent slug={params.slug}/>
       <Footer
         menuOpen={menuOpen}
         contactOpen={contactOpen}
@@ -60,11 +58,9 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+const BlogPageContent = ({slug}) => {
 
-const BlogContent = () => {
-
-  const [blogs, setBlogs] = useState([]);
+  const [blog, setBlog] = useState([]);
 
   useEffect(() => {
     const databases = new Databases(client);
@@ -72,39 +68,23 @@ const BlogContent = () => {
     let promise = databases.listDocuments(
       "658082e3788180610c6b",
       "658082f8677d5ec3e40a",
+      [
+        Query.equal("slug", slug),
+      ]
     );
 
     promise.then(function (response) {
-      setBlogs(response.documents);
+      setBlog(response.documents[0]);
     });
   }, []);
 
   return (
     <>
-    <Text />
-    <div className="w-[100vw] flex flex-wrap gap-[24px] px-[12px] justify-center">
-      {blogs.map((blog) => {
-        return <Card blog={blog} key={blog.$id} />;
-      })}
-      {blogs.map((blog) => {
-        return <Card blog={blog} key={blog.$id} />;
-      })}
+    <div className="w-[100vw] h-[80vh] flex flex-wrap gap-[24px] px-[12px] justify-center">
+      {blog.content}
     </div>
     </>
   );
 };
 
-const Text = () => {
-  return (
-    <section className="w-[100vw] max-h-max flex justify-between mt-[48px] px-[24px] py-[24px] md:pb-[24px]">
-      <div className="flex">
-        <span className="h-full uppercase lightBlack text-[13px] normalFont">
-          004/&nbsp;&nbsp;
-        </span>
-        <span className="h-full uppercase text-black text-[13px] normalFont">
-          Editor's Pick
-        </span>
-      </div>
-    </section>
-  );
-};
+export default BlogPage
