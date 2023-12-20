@@ -9,6 +9,17 @@ client
   .setProject("655e3eee8059e4984924");
 
 const Blog = () => {
+  return (
+    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white mt-[24px] md:mt-[100px]">
+      <Text />
+      <CardContainer />
+    </section>
+  );
+};
+
+export default Blog;
+
+const CardContainer = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -26,24 +37,20 @@ const Blog = () => {
       setBlogs(response.documents);
     });
   }, []);
-
   return (
-    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white mt-[24px] md:mt-[100px]">
-      <Text />
-      <div className="w-full flex flex-col md:flex-row gap-[24px] px-[12px] justify-center md:items-center">
+    <div className="w-full flex flex-col md:flex-row gap-[24px] px-[12px] justify-center md:items-center">
         {blogs.map((blog) => {
           return <Card blog={blog} key={blog.$id} />;
         })}
       </div>
-    </section>
-  );
-};
+  )
+}
 
-export default Blog;
+export { CardContainer };
 
 const Card = ({ blog }) => {
 
-  const formattedDate = new Date(blog.date).toLocaleDateString('en-US', {
+  const formattedDate = new Date(blog?.date).toLocaleDateString('en-US', {
     month: 'long', 
     day: 'numeric',
     year: 'numeric',
@@ -51,18 +58,18 @@ const Card = ({ blog }) => {
 
   return (
     <div className="w-[100%] md:w-[calc(50%-24px)] m-[0px] max-h-max min-h-[50vh] relative z-[1] flex flex-col">
-      <Link href={`/blog/${blog.slug}`}><div
+      <Link href={`/blog/${blog?.slug}`} target="_blank"><div
         className="h-[50vh] w-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${blog.bgSrc})` }}
+        style={{ backgroundImage: `url(${blog?.bgSrc})` }}
       ></div></Link>
       <div className="h-[200px] w-full flex flex-col">
         <div className="w-full max-h-max flex py-[12px] gap-[6px]">
           <span
             className="normalFont text-[14px] h-[35px] w-[35px] rounded-[2px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${blog.writerProfilePicture})` }}
+            style={{ backgroundImage: `url(${blog?.writerProfilePicture})` }}
           ></span>
           <span className="normalFont text-[14px] h-full max-w-max flex flex-col items-center justify-center">
-            {blog.writer}
+            {blog?.writer}
           </span>
           <span className="normalFont text-[14px] h-full max-w-max flex flex-col items-center justify-center pb-[5px]">
             .
@@ -72,12 +79,12 @@ const Card = ({ blog }) => {
           </span>
         </div>
         <span className="normalFont text-[12px] mt-[6px] mb-[12px] uppercase">
-          {blog.title}
+          {blog?.title}
         </span>
         <div className="flex w-full">
           <div className="flex gap-[5px]">
-            {blog.tags &&
-              blog.tags.map((item, index) => (
+            {blog?.tags &&
+              blog?.tags.map((item, index) => (
                 <span
                   key={index}
                   className="text-[10px] uppercase rounded-[2px] px-[15px] h-[35px] border border-[rgba(0,0,0,0.25)] flex items-center justify-center bg-white hover:bg-[rgba(0,0,0,0.05)] transition-all duration-500 text-black"

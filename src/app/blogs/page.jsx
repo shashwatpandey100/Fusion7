@@ -4,6 +4,7 @@ import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { Card } from "../components/blog";
 import { Client, Databases, Query } from "appwrite";
+import SmoothScroll from "../components/smoothScroll.js";
 const client = new Client();
 
 client
@@ -36,7 +37,7 @@ const Blogs = () => {
   };
 
   return (
-    <>
+    <SmoothScroll>
       <Navbar
         menuOpen={menuOpen}
         contactOpen={contactOpen}
@@ -56,7 +57,7 @@ const Blogs = () => {
         closeContact={closeContact}
         goToHome={goToHome}
       />
-    </>
+    </SmoothScroll>
   );
 };
 
