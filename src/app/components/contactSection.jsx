@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const ContactSection = ({ openContact }) => {
   let steps = 0;
@@ -63,7 +64,7 @@ const ContactSection = ({ openContact }) => {
   };
 
   return (
-    <section className="h-[100vh] w-[100vw] mt-[150px] relative overflow-hidden bg-white">
+    <section className="h-[100vh] w-[100vw] pt-[150px] relative overflow-hidden bg-[rgba(0,0,0,0.05)]">
       <div className="h-full w-full absolute top-0 left-0 flex flex-col items-center justify-center">
         <div className="flex flex-col">
           <p className="text-[3em] text-center boldFont md:leading-[110px] lg:leading-[130px] md:text-[5em] lg:text-[8em] text-black uppercase">
@@ -97,17 +98,14 @@ const ContactSection = ({ openContact }) => {
         onMouseMove={(e) => {
           manageMouseMove(e);
         }}
-        className="flex relative h-full w-full overflow-hidden bg-transparent z-[10]"
+        className="flex relative h-full w-full bg-transparent z-[10]"
       >
         {[...Array(19).keys()].map((_, index) => {
           const ref = useRef(null);
           refs.push(ref);
           return (
             <img
-              className="h-[30vh] absolute hidden transform -translate-x-1/2 -translate-y-1/2"
-              onClick={() => {
-                console.log(refs);
-              }}
+              className="h-[30vh] absolute hidden transform -translate-x-1/2 -translate-y-1/2 before:opacity-50 hover:opacity-100 transition-opacity duration-500"
               ref={ref}
               src={`/images/${index}.jpg`}
             ></img>
@@ -122,7 +120,6 @@ export default ContactSection;
 
 {
   /* <video
-        ref={videoRef}
         src="https://assets-global.website-files.com/6475c270c3f3fd0a9eb15db5/647a3fd21d79da9cc0b8fdc5_3D%20Bubbles-transcode.mp4"
         autoPlay={true}
         loop={true}
@@ -132,7 +129,7 @@ export default ContactSection;
       ></video>
       <div className="h-full w-full absolute top-0 left-0 flex flex-col items-center justify-center">
         <div className="flex flex-col">
-          <p className="text-[3em] text-center boldFont md:leading-[110px] lg:leading-[130px] md:text-[5em] lg:text-[8em] uppercase">
+          <p className="text-[3em] text-center boldFont md:leading-[110px] lg:leading-[130px] md:text-[5em] lg:text-[8em] uppercase text-white" >
             Have an idea? <br /> Let’s talk.
           </p>
           <div className="flex flex-col items-center mt-[24px]">
@@ -157,5 +154,5 @@ export default ContactSection;
             </button>
           </div>
         </div>
-      </div> */
+      </div>  */
 }

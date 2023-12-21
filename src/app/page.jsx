@@ -109,11 +109,11 @@ export default function Home() {
           <section ref={projects}>
             <Projects />
           </section>
-          <section ref={contact}>
-            <ContactSection openContact={openContact} />
-          </section>
           <section ref={blog}>
             <Blog />
+          </section>
+          <section ref={contact}>
+            <ContactSection openContact={openContact} />
           </section>
           <section>
             <Footer
