@@ -100,7 +100,7 @@ const Text = () => {
     <section className="w-[100vw] max-h-max flex justify-between mt-[48px] px-[24px] py-[24px] md:pb-[24px]">
       <div className="flex">
         <span className="h-full uppercase lightBlack text-[13px] normalFont">
-          004/&nbsp;&nbsp;
+          _ /&nbsp;&nbsp;
         </span>
         <span className="h-full uppercase text-black text-[13px] normalFont">
           Editor's Pick

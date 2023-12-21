@@ -113,7 +113,7 @@ const BlogPageContent = ({ slug }) => {
             <span>{formattedDate}</span>
           </div>
           <div className="w-[75%] flex flex-col">
-            <p className="text-[1.1em] normalFont tracking-tighter mt-[12px] pr-[12px]">
+          <p className="text-[1.1em] normalFont tracking-tighter mt-[12px] pr-[12px]">
               Initiating_Transmission: Welcome, digital art enthusiasts and
               collectors of the extraordinary. As we revel in the aftermath of
               the latest FLUX NFT drop, our focus shifts to RedruM, an artist
