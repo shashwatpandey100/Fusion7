@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Projects = () => {
   return (
-    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white mt-[24px] md:mt-[100px]">
+    <section className="w-[100vw] max-h-max flex flex-col gap-[12px] bg-white mt-[24px] md:mt-[100px] readFont">
       <Text />
       <div className="w-full flex flex-col md:flex-row gap-[24px] px-[24px] justify-center md:items-center">
         <Card
@@ -73,14 +73,14 @@ const Text = () => {
   return (
     <section className="w-[100vw] max-h-max flex justify-between px-[24px] py-[24px] md:pb-[24px]">
       <div className="flex">
-      <span className="h-full uppercase lightBlack text-[13px] normalFont">
+      <span className="h-full uppercase lightBlack text-[13px]">
         003/&nbsp;&nbsp;
       </span>
-      <span className="h-full uppercase text-black text-[13px] normalFont">
+      <span className="h-full uppercase text-black text-[13px]">
         Selected works
       </span>
       </div>
-      <Link href={'/allProjects'} className="h-full uppercase text-black text-[13px] normalFont cursor-pointer hover:text-[#9204c1]">
+      <Link href={'/allProjects'} className="h-full uppercase text-black text-[13px] cursor-pointer hover:text-[#9204c1]">
         (See all)
       </Link>
     </section>

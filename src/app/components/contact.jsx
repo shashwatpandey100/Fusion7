@@ -23,7 +23,7 @@ const Contact = ({ closeContact }) => {
       <section className="h-[100%] w-full flex flex-col justify-center p-4 lg:p-12 relative z-50">
         <div className="w-full flex flex-col h-[70px] absolute top-0 left-0">
           <div className="w-full border-b border-black flex items-center justify-between py-[2%]">
-            <span className="uppercase text-[13px]">Contact us</span>
+            <span className="uppercase text-[15px]">Contact us</span>
             <span
               onClick={closeContact}
               className="text-[25px] cursor-pointer z-[99] hover:scale-[0.8] transition duration-500"
@@ -32,14 +32,14 @@ const Contact = ({ closeContact }) => {
             </span>
           </div>
         </div>
-        <p className="text-[3em] font-[600] text-[#2c2c2c]">Thank you!</p>
+        <p className="text-[3em] font-[600] text-[#2c2c2c] readFont">Thank you!</p>
         <div className="my-4 flex flex-col gap-3 pb-[100px] max-w-[800px]">
-          <p className="text-[13px]">
+          <p className="text-[13px] readFont">
             Your request has been successfully sent. Please await a response
             from our manager 🙂{" "}
           </p>
         </div>
-        <div className="max-h-max absolute bottom-10 right-10 text-[#2c2c2c]">
+        <div className="max-h-max absolute bottom-10 right-10 text-[#2c2c2c] roboticFont">
           <p className="text-[12px] hover:underline my-[2px] leading-tight">
             <a href="https://www.instagram.com/thisiskromad/" target="_blank">
               PINTEREST
@@ -69,7 +69,7 @@ const Contact = ({ closeContact }) => {
         <section className="h-[100%] w-full px-[18px] md:px-0 z-50 flex flex-col relative">
           <div className="w-full flex flex-col h-[70px]">
             <div className="w-full border-b border-black flex items-center justify-between py-[2%]">
-              <span className="uppercase text-[13px]">Contact us</span>
+              <span className="uppercase text-[13px] roboticFont">Contact us</span>
               <span
                 onClick={closeContact}
                 className="text-[25px] cursor-pointer z-[99] hover:scale-[0.8] transition duration-500"
@@ -85,7 +85,7 @@ const Contact = ({ closeContact }) => {
           >
             <div className="w-full max-h-max flex flex-col md:flex-row gap-[5px]">
               <input
-                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[13px] text-black font-[300]"
+                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] text-black font-[300] roboticFont"
                 type="text"
                 name="name"
                 placeholder="Name"
@@ -93,7 +93,7 @@ const Contact = ({ closeContact }) => {
                 required={true}
               />
               <input
-                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[13px] text-black font-[300]"
+                className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] text-black font-[300] roboticFont"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -103,14 +103,14 @@ const Contact = ({ closeContact }) => {
             </div>
             <div className="w-full max-h-max flex md:gap-[5px]">
               <textarea
-                className={`w-[100%] h-[240px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[13px] text-black font-[300]`}
+                className={`w-[100%] h-[240px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[15px] text-black font-[300] roboticFont`}
                 name="projectDetails"
                 placeholder="Project details"
                 onChange={handleInputChange}
                 required={true}
               />
             </div>
-            <div className="w-full h-[10%] flex items-end justify-between absolute bottom-0">
+            <div className="w-full h-[10%] flex items-end justify-between absolute bottom-0 roboticFont">
               <p className="text-[13px] lg:text-[16px] text-black">
                 Our Email:{" "}
                 <a href="mailto:info@awsmd.com">

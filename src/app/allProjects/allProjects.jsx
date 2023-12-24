@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 const AllProjects = () => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col readFont">
       <div className="h-[70px] w-full flex flex-col fixed top-[24px] left-[24px] z-[1]">
         <Link href={'/'}>
         <img

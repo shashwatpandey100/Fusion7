@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section className="min-h-[100vh] w-[100vw] bg-white">
+    <section className="min-h-[100vh] w-[100vw] bg-white readFont">
       <Text />
       <section className="flex flex-col px-[24px] items-center">
         {data.map((service, index) => (
@@ -36,7 +36,15 @@ const data = [
     heading: "Web Development",
     src: "https://non-standard.studio/media/pages/news/press-rmit-ugcd-graduate-showcase/b15a877c71-1687408859/rmit_press_2023.mp4",
     desc: "Creating adaptable design elements through precise coding, our focus is on enhancing development for smooth functionality across various devices and browsers.",
-    tech: ["ReactJS", "NextJS", "ViteJS", "NodeJS", "MongoDb", "Mongoose", "PostgreSql"],
+    tech: [
+      "ReactJS",
+      "NextJS",
+      "ViteJS",
+      "NodeJS",
+      "MongoDb",
+      "Mongoose",
+      "PostgreSql",
+    ],
     no: "II.",
   },
   {
@@ -60,19 +68,23 @@ const data = [
 
 const Card = ({ heading, desc, tech, src, no, isLast }) => {
   return (
-    <section className={`w-full ${isLast? 'border-y' : 'border-t'} border-black pt-[1rem] pb-[4rem] max-h-max md:h-[400px] max-h-max flex`}>
-      <div className="w-[10%] md:w-[25%] h-full text-[13px] normalFont uppercase">
+    <section
+      className={`w-full ${
+        isLast ? "border-y" : "border-t"
+      } border-black pt-[1rem] pb-[4rem] max-h-max md:h-[400px] max-h-max flex`}
+    >
+      <div className="w-[10%] md:w-[25%] h-full text-[13px] uppercase">
         {no}
       </div>
       <div className="h-full w-[90%] md:min-w-[75%] flex md:flex-row flex-col gap-[10px]">
         <div className="w-full md:w-[50%] h-full items-center text-[13px]">
           <div className="flex gap-[10px] flex-col md:max-w-[70%]">
-            <p className="normalFont text-[16px] font-[600]">{heading}</p>
-            <p className="normalFont">{desc}</p>
+            <p className=" text-[16px] font-[600]">{heading}</p>
+            <p className="">{desc}</p>
           </div>
         </div>
         <div className="h-full w-full md:w-[50%] gap-[10px] flex flex-col md:flex-row">
-        <div className="w-full md:w-[50%] h-full">
+          <div className="w-full md:w-[50%] h-full">
             <video
               className="max-h-[300px] w-full object-cover border-none"
               autoPlay
@@ -84,12 +96,12 @@ const Card = ({ heading, desc, tech, src, no, isLast }) => {
             </video>
           </div>
           <div className="w-[50%] h-full flex md:justify-center">
-            <div className="normalFont flex flex-col">
-              <span className="text-[13px] uppercase normalFont mb-[10px]">
+            <div className=" flex flex-col">
+              <span className="text-[13px] uppercase  mb-[10px]">
                 Tech we use:{" "}
               </span>
               {tech.map((t, index) => (
-                <span key={index} className="text-[12px] normalFont">
+                <span key={index} className="text-[12px] ">
                   {t}
                 </span>
               ))}
@@ -104,10 +116,10 @@ const Card = ({ heading, desc, tech, src, no, isLast }) => {
 const Text = () => {
   return (
     <section className="w-[100vw] max-h-max flex flex-row px-[24px] py-[24px] md:mt-[100px] md:pb-[24px]">
-      <span className="h-full uppercase lightBlack text-[13px] normalFont">
+      <span className="h-full uppercase lightBlack text-[13px]">
         002/&nbsp;&nbsp;
       </span>
-      <span className="h-full uppercase text-black text-[13px] normalFont">
+      <span className="h-full uppercase text-black text-[13px]">
         What we do best
       </span>
     </section>

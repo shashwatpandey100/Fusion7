@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
+import 'tailwindcss/tailwind.css';
 import Intro from "./components/intro.jsx";
 import Projects from "./components/projects.jsx";
 import SmoothScroll from "./components/smoothScroll.js";
@@ -29,9 +30,11 @@ export default function Home() {
       behavior: "smooth",
     });
   };
-
   const goToHome = () => {
     window.location.href = "/";
+  };
+  const goToBlogs = () => {
+    window.location.href = "/blogs";
   };
   const goToIntro = () => {
     closeMenu();
@@ -95,7 +98,7 @@ export default function Home() {
             goToProjects={goToProjects}
             goToContact={goToContact}
             goToBlog={goToBlog}
-            goToHome={goToHome}
+            goToBlogs={goToBlogs}
           />
           <section ref={intro}>
             <Intro />
@@ -123,6 +126,7 @@ export default function Home() {
               goToServices={goToServices}
               goToProjects={goToProjects}
               goToHome={goToHome}
+              goToBlogs={goToBlogs}
             />
           </section>
         </section>

@@ -41,7 +41,7 @@ const Preloader = () => {
           style={{ width: `${counter}%` }}
         ></div>
       </div>
-      <div className="w-[90vw] md:w-[40vw] mt-[5px] flex justify-between">
+      <div className="w-[90vw] md:w-[40vw] mt-[5px] flex justify-between roboticFont">
         <span className="uppercase text-[10px] flex items-center">
           <IoIosFastforward /> &nbsp; loading &nbsp; {counter}%
         </span>

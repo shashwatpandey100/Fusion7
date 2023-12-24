@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { menuSlide } from "./anim";
@@ -24,6 +24,7 @@ const Navbar = ({
   goToProjects,
   goToContact,
   goToHome,
+  goToBlogs,
 }) => {
   return (
     <>
@@ -34,7 +35,7 @@ const Navbar = ({
         >
           <button onClick={openMenu}>
             <p
-              className="underline cursor-pointer text-[13px] font-[300] flex gap-1"
+              className="underline cursor-pointer text-[13px] font-[300] flex gap-1 roboticFont"
               style={{ color: "white" }}
             >
               MENU
@@ -42,7 +43,7 @@ const Navbar = ({
           </button>
           <button onClick={openContact}>
             <p
-              className="underline cursor-pointer text-[13px] font-[300] flex gap-1"
+              className="underline cursor-pointer text-[13px] font-[300] flex gap-1 roboticFont"
               style={{ color: "white" }}
             >
               <span className="text-[18px]">
@@ -78,6 +79,7 @@ const Navbar = ({
                   <span className="cursor-pointer" onClick={goToServices || goToHome}>Services</span>
                   <span className="cursor-pointer" onClick={goToProjects || goToHome}>Projects</span>
                   <span className="cursor-pointer" onClick={goToContact || goToHome}>Contact us</span>
+                  <span className="cursor-pointer" onClick={goToBlogs}>Blogs</span>
                 </div>
                 <Footer />
               </div>

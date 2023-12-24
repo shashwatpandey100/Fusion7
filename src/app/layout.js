@@ -1,13 +1,16 @@
 "use client";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+const myFont = localFont({
+    src: './static-fonts/my-font.otf',
+    display: 'swap',
+})
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={myFont.className}>
+      <body className={myFont.className}>
         {children}
       </body>
     </html>

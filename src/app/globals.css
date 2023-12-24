@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 * {
-  font-family: monospace;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -24,12 +23,12 @@ img {
   user-select: none;
 }
 
-.normalFont {
+.readFont {
   font-family: sans-serif;
 }
 
-.boldFont {
-  font-family: Impact, sans-serif;
+.roboticFont {
+  font-family: sans-serif;
 }
 
 .lightBlack {
@@ -98,4 +97,36 @@ input:-webkit-autofill:active{
 .border-secondary-600 {
   --tw-border-opacity: 1;
   border-color: rgb(140 140 115 / var(--tw-border-opacity));
+}
+
+.fade-in {
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
+  -moz-animation: fadeIn ease 0.5s;
+  -o-animation: fadeIn ease 0.5s;
+  -ms-animation: fadeIn ease 0.5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0; scale:0.85;}
+  100% {opacity:1; scale: 1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0; scale:0.85;}
+  100% {opacity:1; scale: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0; scale:0.85;}
+  100% {opacity:1; scale: 1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0; scale:0.85;}
+  100% {opacity:1; scale: 1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0; scale:0.85;}
+  100% {opacity:1; scale: 1;}
 }

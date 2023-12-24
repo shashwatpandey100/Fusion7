@@ -35,21 +35,21 @@ const TalkPage = ({
   };
 
   return (
-    <section className="max-h-max w-[100vw] pt-[36px] px-[24px] bg-[rgba(0,0,0,0.05)]">
-      <div className="flex flex-col pt-[24px]">
-        <span className="w-full uppercase font-[600]">
+    <section className="max-h-max w-[100vw] pt-[36px] px-[24px] bg-white">
+      <div className="flex flex-col pt-[24px] border-t border-black border-dashed">
+        <span className="w-full uppercase text-[22px]">
           DIVE INTO OUR INKED INSIGHTS WITH — THE/INKWELL
         </span>
         {state.succeeded ? (
           <div className="flex h-[64px] w-[100%] gap-[5px] mt-[24px] flex items-center relative">
-            <span className="absolute right-0">
+            <span className="absolute right-0 text-[22px] uppercase">
               You are now subscribed to the INKWELL
             </span>
           </div>
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col md:flex-row md:items-center justify-center w-[100%] h-[64px] gap-[5px] mt-[24px]"
+            className="flex flex-col md:flex-row md:items-center justify-center w-[100%] h-[64px] gap-[5px] mt-[24px] roboticFont"
           >
             <input
               className="md:w-[50%] w-[100%] h-[44px] border border-[rgba(0,0,0,0.25)] rounded-[2px] focus:outline-none p-4 bg-transparent text-[13px] font-[300] text-black"
@@ -89,17 +89,17 @@ const TalkPage = ({
       </div>
       <div className="w-full max-h-max md:h-[45%] py-[12px] md:pt-[48px] md:pb-[192px] flex gap-[3rem]">
         <div className="h-full w-[calc(100%/3)] flex flex-col">
-          <span className="uppercase font-[600]">
+          <span className="uppercase font-[600] text-[22px]">
             Let's bring a touch of brilliance to the digital realm.
           </span>
           <span
             onClick={openContact}
-            className="pt-[24px] pb-0 font-[400] normalFont border-b border-black text-[2rem] max-w-max transition-all duration-300 hover:text-[#9204c1] hover:border-[#9204c1] cursor-pointer"
+            className="pt-[24px] pb-0 font-[400] border-b border-black text-[2rem] max-w-max transition-all duration-300 hover:text-[#9204c1] hover:border-[#9204c1] cursor-pointer"
           >
             Get in touch
           </span>
         </div>
-        <div className="h-full w-[calc(100%/3)] flex flex-col">
+        <div className="h-full w-[calc(100%/3)] flex flex-col roboticFont">
           <span className="mb-[24px] uppercase text-[14px] font-[600]">
             Contacts
           </span>
@@ -117,7 +117,7 @@ const TalkPage = ({
             <a href="tel:+919267992009">+91 92679 92009</a>
           </span>
         </div>
-        <div className="h-full w-[calc(100%/3)] flex justify-between">
+        <div className="h-full w-[calc(100%/3)] flex justify-between roboticFont">
           <div className="h-full w-full flex flex-col">
             <span className="mb-[24px] uppercase text-[14px] font-[600]">
               Menu
@@ -180,7 +180,7 @@ const TalkPage = ({
           </div>
         </div>
       </div>
-      <div className="w-full h-[5%] flex justify-between items-center py-[24px]">
+      <div className="w-full h-[5%] flex justify-between items-center py-[24px] roboticFont">
         <span className="uppercase text-[12px] hover:text-[#9204c1]">
           COPYRIGHT 2023. ALL RIGHT RESERVED
         </span>

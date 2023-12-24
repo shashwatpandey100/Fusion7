@@ -1,5 +1,5 @@
 import React from "react";
-import AllProjects from "../components/allProjects.jsx";
+import AllProjects from "./allProjects.jsx";
 import SmoothScroll from "../components/smoothScroll.js";
 
 const AllProject = () => {
