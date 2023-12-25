@@ -21,11 +21,15 @@ const Blog = () => {
 export default Blog;
 
 const CardContainer = () => {
+
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const queryResult = await client.fetch(query);
+        setLoading(false);
         setBlogs(queryResult);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -37,9 +41,16 @@ const CardContainer = () => {
 
   return (
     <div className="w-full flex flex-col md:flex-row gap-[24px] px-[12px] justify-center md:items-center bg-white">
-      {blogs.map((blog) => {
-        return <Card blog={blog} key={blog.$id} />;
-      })}
+      {loading ? (
+        <>
+          <CardSkeleton />
+          <CardSkeleton />
+        </>
+      ) : (
+        blogs.map((blog) => (
+          <Card blog={blog} key={blog.$id} />
+        ))
+      )}
     </div>
   );
 };
@@ -106,6 +117,30 @@ const Card = ({ blog }) => {
 };
 
 export { Card };
+
+const CardSkeleton = () => {
+  return (
+    <div className="w-[100%] md:w-[calc(50%-24px)] m-[0px] max-h-max min-h-[50vh] relative z-[1] flex flex-col">
+      <div className="h-[50vh] w-full bg-gray-300 animate-pulse"></div>
+      <div className="h-[200px] w-full flex flex-col">
+        <div className="w-full max-h-max flex py-[12px] gap-[6px]">
+          <span className="text-[14px] h-[35px] w-[35px] rounded-[2px] bg-gray-300 animate-pulse"></span>
+          <span className="text-[14px] h-full max-w-max bg-gray-300 animate-pulse"></span>
+          <span className="text-[14px] h-full min-w-[140px] bg-gray-300 animate-pulse"></span>
+        </div>
+        <span className="text-[12px] mt-[6px] mb-[12px] bg-gray-300 animate-pulse"></span>
+        <div className="flex w-full">
+          <div className="flex gap-[5px]">
+            <span className="text-[10px] rounded-[2px] px-[15px] h-[35px] min-w-[140px] bg-gray-300 animate-pulse"></span>
+            <span className="text-[10px] rounded-[2px] px-[15px] h-[35px] min-w-[140px] bg-gray-300 animate-pulse"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { CardSkeleton };
 
 const Text = () => {
   return (

@@ -36,7 +36,7 @@ const TalkPage = ({
 
   return (
     <section className="max-h-max w-[100vw] pt-[36px] px-[24px] bg-white">
-      <div className="flex flex-col pt-[24px] border-t border-black border-dashed">
+      <div className="flex flex-col pt-[24px] border-t border-black">
         <span className="w-full uppercase text-[22px]">
           DIVE INTO OUR INKED INSIGHTS WITH — THE/INKWELL
         </span>

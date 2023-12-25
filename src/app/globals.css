@@ -130,3 +130,8 @@ input:-webkit-autofill:active{
   0% {opacity:0; scale:0.85;}
   100% {opacity:1; scale: 1;}
 }
+
+.blogContent p {
+  font-size: 15px;
+  font-weight: 400;
+}

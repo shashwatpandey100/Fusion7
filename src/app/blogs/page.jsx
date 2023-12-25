@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { Card } from "../components/blog";
+import { CardSkeleton } from "../components/blog";
 import SmoothScroll from "../components/smoothScroll.js";
 import { groq } from "next-sanity";
 import { client, urlFor } from "@/lib/createClient";
@@ -68,10 +69,13 @@ export default Blogs;
 const BlogContent = () => {
 
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const queryResult = await client.fetch(query);
+        setLoading(false);
         setBlogs(queryResult);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -85,12 +89,16 @@ const BlogContent = () => {
     <>
     <Text />
     <div className="w-[100vw] min-h-[70vh] flex flex-wrap gap-[24px] px-[12px] justify-center bg-white">
-      {blogs.map((blog) => {
-        return <Card blog={blog} key={blog.$id} />;
-      })}
-      {blogs.map((blog) => {
-        return <Card blog={blog} key={blog.$id} />;
-      })}
+    {loading ? (
+        <>
+          <CardSkeleton />
+          <CardSkeleton />
+        </>
+      ) : (
+        blogs.map((blog) => (
+          <Card blog={blog} key={blog.$id} />
+        ))
+      )}
     </div>
     </>
   );
