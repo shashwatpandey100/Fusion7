@@ -81,7 +81,7 @@ const Contact = ({ closeContact }) => {
 
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col relative w-[100%] h-[100%] gap-[5px] pt-[10%]"
+            className="flex flex-col relative w-[100%] h-[100%] gap-[5px]"
           >
             <div className="w-full max-h-max flex flex-col md:flex-row gap-[5px]">
               <input
