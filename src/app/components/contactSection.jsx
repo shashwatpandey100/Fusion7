@@ -4,7 +4,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const ContactSection = ({ openContact }) => {
   return (
-    <section className="h-[100vh] w-[100vw] mt-[150px] relative overflow-hidden bg-[rgba(0,0,0,0.05)]">
+    <section className="h-[100vh] w-[100vw] relative overflow-hidden bg-[rgba(0,0,0,0.05)]">
       <div className="h-full w-full absolute top-0 left-0 flex flex-col items-center justify-center">
         <div className="flex flex-col">
           <p className="text-[3em] text-center md:leading-[80px] lg:leading-[100px] md:text-[5em] lg:text-[8em] uppercase" style={{ color: 'white', mixBlendMode: 'difference' }}>
