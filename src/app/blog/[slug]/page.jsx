@@ -115,7 +115,7 @@ const BlogPageContent = ({ slug }) => {
                 : "none",
             }}
           ></div>
-          <section className="flex mt-[48px] max-h-max">
+          <section className="flex justify-between relative mt-[48px] max-h-max">
             <div className="w-[25%] flex flex-col gap-[6px] roboticFont text-[13px]">
               <div className="w-full max-h-max flex gap-[6px]">
                 <span
