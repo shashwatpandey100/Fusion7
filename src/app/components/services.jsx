@@ -27,14 +27,14 @@ export default Services;
 const data = [
   {
     heading: "Web Design",
-    src: "https://non-standard.studio/media/pages/news/an-introduction/c44bde69fb-1690180289/nonstandard-_header_desktop_02_square.mp4",
+    src: "https://cdn.dribbble.com/userupload/12127095/file/original-7c87e39b32e3baa42a6cee01fb0d6a5e.jpg?resize=1024x768",
     desc: "Crafting visually stunning and user-friendly interfaces, our web design services focus on delivering a seamless and engaging user experience.",
     tech: ["Figma", "Sketch", "Adobe XD", "Adobe Photoshop"],
     no: "I.",
   },
   {
     heading: "Web Development",
-    src: "https://non-standard.studio/media/pages/news/press-rmit-ugcd-graduate-showcase/b15a877c71-1687408859/rmit_press_2023.mp4",
+    src: "https://res.cloudinary.com/dw0bwetr1/image/upload/v1703584178/1_3u7gaaVShelDSK10OVx8dA_kusoyv.webp",
     desc: "Creating adaptable design elements through precise coding, our focus is on enhancing development for smooth functionality across various devices and browsers.",
     tech: [
       "ReactJS",
@@ -49,7 +49,7 @@ const data = [
   },
   {
     heading: "Branding",
-    src: "https://non-standard.studio/media/pages/news/open-opportunities-for-mid-weight-senior-designers/1996e413cf-1687755883/nonstandard-_news_05-n-0623-0_square.mp4",
+    src: "https://res.cloudinary.com/dw0bwetr1/image/upload/v1703584179/Screenshot_2023-12-26_at_15.17.10_irnrgq.png",
     desc: "Crafting compelling brand identities that resonate with your target audience, our branding services go beyond aesthetics. We strategically guide businesses through user-centric design principles, elevating productivity and revenue. As we consistently surpass milestones, our distinctive ingenuity defines a unique position for your brand in the industry.",
     tech: [
       "Figma",
@@ -85,15 +85,11 @@ const Card = ({ heading, desc, tech, src, no, isLast }) => {
         </div>
         <div className="h-full w-full md:w-[50%] gap-[10px] flex flex-col md:flex-row">
           <div className="w-full md:w-[50%] h-full">
-            <video
-              className="max-h-[300px] w-full object-cover border-none"
-              autoPlay
-              loop
-              muted
-              controls={false}
+            <img
+              className="min-h-[280px] w-full object-cover"
+              src={src}
             >
-              <source src={src} type="video/mp4" />
-            </video>
+            </img>
           </div>
           <div className="w-[50%] h-full flex md:justify-center">
             <div className=" flex flex-col">

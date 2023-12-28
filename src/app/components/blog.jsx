@@ -150,7 +150,7 @@ const Text = () => {
           004/&nbsp;&nbsp;
         </span>
         <span className="h-full uppercase text-black text-[13px]">
-          Editor's Pick
+          Editor's Picks
         </span>
       </div>
       <Link

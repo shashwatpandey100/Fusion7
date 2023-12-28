@@ -112,7 +112,7 @@ const Text = () => {
           _ /&nbsp;&nbsp;
         </span>
         <span className="h-full uppercase text-black text-[13px] normalFont">
-          Editor's Pick
+          Editor's Picks
         </span>
       </div>
     </section>

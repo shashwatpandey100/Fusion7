@@ -33,16 +33,19 @@ const Intro = () => {
       <section className="h-[100vh] w-[100vw] lightBg mx-auto absolute top-0 left-0">
         <video
           src="https://assets-global.website-files.com/6475c270c3f3fd0a9eb15db5/647a3fd21d79da9cc0b8fdc5_3D%20Bubbles-transcode.mp4"
-          className="h-full w-full object-cover border-none lightBg"
+          className="h-full w-full object-cover"
           autoPlay={true}
-        loop={true}
-        muted={true}
-        controls={false}
+          loop={true}
+          muted={true}
+          controls={false}
         ></video>
       </section>
       <div className="h-[100vh] w-[100vw] z-[-2]">
         <section className="w-screen h-screen flex flex-col items-center justify-center p-2 lg:p-6 relative">
-          <p className="text-[3em] text-center md:leading-[80px] lg:leading-[100px] md:text-[5em] lg:text-[8em] text-white uppercase"  style={{ color: 'white', mixBlendMode: 'difference' }}>
+          <p
+            className="text-[3em] text-center md:leading-[80px] lg:leading-[100px] md:text-[5em] lg:text-[8em] text-white uppercase"
+            style={{ color: "white", mixBlendMode: "difference" }}
+          >
             YOUR DIGITAL FUTURE WELL BUILT
           </p>
           <div className="flex mt-5 justify-between flex items-center md:max-w-max">
@@ -84,10 +87,7 @@ const Intro = () => {
                   YOUTUBE
                 </p>
               </a>
-              <a
-                href={constants.instagram}
-                target="_blank"
-              >
+              <a href={constants.instagram} target="_blank">
                 <p
                   className="hover:underline leading-tight w-full"
                   style={{ color: "white" }}
@@ -103,10 +103,7 @@ const Intro = () => {
                   DRIBBLE
                 </p>
               </a>
-              <a
-                href={constants.linkedin}
-                target="_blank"
-              >
+              <a href={constants.linkedin} target="_blank">
                 <p
                   className="hover:underline leading-tight w-full"
                   style={{ color: "white" }}
